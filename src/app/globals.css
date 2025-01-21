@@ -2,20 +2,82 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+.card{
+    background-image: conic-gradient(from 16deg at 0% 30% 30%,#000 , #0D31474D , #0283C54D );
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+
+
+@keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-700px * 3 - 2rem * 3));
+    }
   }
-}
+  
+  .animate-marquee {
+    animation: marquee 10s linear infinite;
+  }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
+  .marqueecard{
+    /* box-shadow: 0 4px 10px rgba(2, 131, 197, 0.92); */
+    filter: drop-shadow(0 4px 10px rgba(2, 131, 197, 0.92));
+    background: rgb(2,131,197);
+background: linear-gradient(340deg, rgb(2, 78, 116) 1%, rgba(0,42,66,1) 46%);
+
+
+  }
+
+  .footer {
+    height: 97%;
+    width: 100%;
+    clip-path: ellipse(65% 100% at 50% 0%);
+  }
+  .wrapper {
+    clip-path: ellipse(65% 100% at 50% 0%);
+    background-image: linear-gradient(
+      90deg,
+      hsl(14deg 89% 55%) 0%,
+      hsl(15deg 75% 61%) 8%,
+      hsl(16deg 62% 67%) 17%,
+      hsl(17deg 47% 73%) 25%,
+      hsl(18deg 34% 79%) 33%,
+      hsl(20deg 20% 85%) 42%,
+      hsl(20deg 7% 92%) 50%,
+      hsl(20deg 22% 81%) 58%,
+      hsl(18deg 38% 71%) 67%,
+      hsl(17deg 54% 61%) 75%,
+      hsl(16deg 69% 51%) 83%,
+      hsl(15deg 85% 41%) 92%,
+      hsl(14deg 100% 31%) 100%
+    );
+
+  }
+  
+  /* Media query for mobile screens */
+  @media (max-width: 768px) {
+    .footer {
+      height: 99%;
+
+      clip-path: ellipse(95% 100% at 50% 0%);
+    }
+  
+    .wrapper {
+      clip-path: ellipse(95% 100% at 50% 0%);
+    }
+  }
+
+  .footer ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer ul li a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+
+
