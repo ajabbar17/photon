@@ -1,3 +1,4 @@
+
 import Image from "next/image";
 import Grid from "./components/Grid";
 import Carousel from "./components/Carousel";
@@ -6,6 +7,8 @@ import Welcome from "./components/Welcome";
 import MarqueeSection from "./components/Marquee";
 import Footer from "./components/footer/Footer";
 import Navbar from "./components/Navbar";
+import Alt1 from "./components/Alt1";
+import Alt2 from "./components/Alt2";
 
 
 export default function Home() {
@@ -14,9 +17,11 @@ export default function Home() {
       <Navbar />
       <HeroSection />
      <Welcome />
+      <Carousel />
      <MarqueeSection />
      <Footer />
-      {/* <Carousel /> */}
+     {/* <Alt1 /> */}
+     <Alt2 />
     {/* <Grid /> */}
     </div>
   );

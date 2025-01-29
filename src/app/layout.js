@@ -1,9 +1,22 @@
-import { Geist, Geist_Mono,Bebas_Neue } from "next/font/google";
+import { Geist, Geist_Mono,Bebas_Neue,Roboto,Source_Sans_3 } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+});
+
+const roboto = Roboto({
+  variable: "--font-roboto",
+  subsets: ["latin"],
+  weight: ["100", "300", "400"],
+
+});
+
+const sourceSans3 = Source_Sans_3({
+  variable: "--font-source-sans-3",
+  subsets: ["latin"],
+  weight: ["300", "400", "600"],
 });
 
 const bebasNeue = Bebas_Neue({
@@ -26,7 +39,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${bebasNeue.variable}  antialiased`}
+        className={`${bebasNeue.variable} ${roboto.variable} ${sourceSans3.variable}  antialiased`}
       >
         {children}
       </body>
