@@ -9,14 +9,14 @@ const geistSans = Geist({
 const roboto = Roboto({
   variable: "--font-roboto",
   subsets: ["latin"],
-  weight: ["100", "300", "400"],
+  weight: ["100", "300", "400", "500"],
 
 });
 
 const sourceSans3 = Source_Sans_3({
   variable: "--font-source-sans-3",
   subsets: ["latin"],
-  weight: ["300", "400", "600"],
+  weight: ["300", "400", "600", "700"],
 });
 
 const bebasNeue = Bebas_Neue({
@@ -39,6 +39,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
+        suppressHydrationWarning={true}
         className={`${bebasNeue.variable} ${roboto.variable} ${sourceSans3.variable}  antialiased`}
       >
         {children}

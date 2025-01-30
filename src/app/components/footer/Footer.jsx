@@ -1,5 +1,5 @@
-import { Instagram } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 import Circle from './Circle';
 
@@ -22,24 +22,26 @@ const Footer = () => {
         </div>
 
         {/* Column 2: Quick Links and Company */}
-        <div className="text-white grid grid-cols-2 gap-5">
+        <div className="text-white grid grid-cols-2 gap-10">
           <div>
-            <h3 className="text-lg font-bold mb-4">Quick Links</h3>
-            <ul className="space-y-2 text-sm text-gray-400">
-              <li><a href="#" className="hover:text-white">About Us</a></li>
-              <li><a href="#" className="hover:text-white">Our Services</a></li>
-              <li><a href="#" className="hover:text-white">Community</a></li>
-              <li><a href="#" className="hover:text-white">Testimonials</a></li>
-              <li><a href="#" className="hover:text-white">FAQ</a></li>
+            <h3 className="text-lg font-normal heading mb-4">SERVICES</h3>
+            <ul className="space-y-2 text-sm detail text-gray-400">
+              <li><Link href="#" className="hover:text-white">Solar Powered System Solutions</Link></li>
+              <li><Link href="#" className="hover:text-white">HVAC Services</Link></li>
+              <li><Link href="#" className="hover:text-white">Elevators and Escalators</Link></li>
+              <li><Link href="#" className="hover:text-white">Fire Safety Services</Link></li>
+              <li><Link href="#" className="hover:text-white">Wind Powered Energy Solutions</Link></li>
+              <li><Link href="#" className="hover:text-white">BMS</Link></li>
+              <li><Link href="#" className="hover:text-white">Lightning Protection System</Link></li>
+              <li><Link href="#" className="hover:text-white">Plumbing, Water Supply & Drainage Solutions</Link></li>
             </ul>
           </div>
           <div>
-            <h3 className="text-lg font-bold mb-4">Company</h3>
+            <h3 className="text-lg  heading font-normal mb-4">QUICK LINKS</h3>
             <ul className="space-y-2 text-sm text-gray-400">
-              <li><a href="#" className="hover:text-white">About Us</a></li>
-              <li><a href="#" className="hover:text-white">Contact Us</a></li>
-              <li><a href="#" className="hover:text-white">Career Tips</a></li>
-              <li><a href="#" className="hover:text-white">Career</a></li>
+              <li><Link href="/about" className="hover:text-white">About Us</Link></li>
+              <li><Link href="/contactus" className="hover:text-white">Contact Us</Link></li>
+              <li><Link href="/services" className="hover:text-white">Services</Link></li>
             </ul>
           </div>
         </div>
@@ -62,7 +64,7 @@ const Footer = () => {
 
           {/* Social Media Icons */}
           <div className="flex mt-10 mb-20 space-x-4">
-            <a href="#" className="text-white text-xl hover:text-gray-300">
+            <Link href="#" className="text-white text-xl hover:text-gray-300">
               <i className="fab fa-instagram">
                 <Image 
                   src="/ig.png"
@@ -71,8 +73,8 @@ const Footer = () => {
                   height={32}
                 />
               </i> {/* Replace with icon */}
-            </a>
-            <a href="#" className="text-white text-xl hover:text-gray-300">
+            </Link>
+            <Link href="#" className="text-white text-xl hover:text-gray-300">
               <i className="fab fa-linkedin">
                 <Image 
                   src="/in.png"
@@ -81,8 +83,8 @@ const Footer = () => {
                   height={32}
                 />
               </i>
-            </a>
-            <a href="#" className="text-white text-xl  hover:text-gray-300">
+            </Link>
+            <Link href="#" className="text-white text-xl  hover:text-gray-300">
               <i className="fab fa-facebook">
                 <Image 
                   src="/fb.png"
@@ -91,7 +93,7 @@ const Footer = () => {
                   height={32}
                 />
               </i>
-            </a>
+            </Link>
           </div>
         </div>
       </div>
