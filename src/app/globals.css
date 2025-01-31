@@ -17,10 +17,33 @@
   font-family: var(--font-roboto), sans-serif;
 
 }
-
-.card{
-    background-image: conic-gradient(from 16deg at 0% 30% 30%,#000 , #0D31474D , #0283C54D );
+.card-btn{
+    background-image: linear-gradient(
+      90deg,
+      hsl(202deg 66% 38%) 0%,
+      hsl(202deg 66% 38%) 8%,
+      hsl(202deg 66% 38%) 15%,
+      hsl(202deg 65% 37%) 22%,
+      hsl(202deg 65% 37%) 29%,
+      hsl(202deg 65% 37%) 36%,
+      hsl(202deg 65% 37%) 44%,
+      hsl(203deg 65% 37%) 53%,
+      hsl(203deg 65% 37%) 63%,
+      hsl(203deg 65% 37%) 74%,
+      hsl(203deg 64% 36%) 86%,
+      hsl(203deg 64% 36%) 100%
+    );
+  
 }
+.img{
+background: radial-gradient(50% 50% at 50% 50%, rgba(2, 131, 197, 0.78) 1%, rgba(0, 0, 0, 0) 100%);
+background-blend-mode: screen;
+
+}
+.card{
+  background: linear-gradient(0deg, #3094CF, #3094CF),
+  conic-gradient(from 181.06deg at 50% 50%, #0283C5 0deg, rgba(0, 0, 0, 0) 172.66deg, #0D3147 281.25deg, #0283C5 360deg);
+  }
 
 .carousel-card{
   background: rgb(4,38,57);
