@@ -4,7 +4,6 @@ export default function MarqueeSection() {
   return (
     <section className="relative overflow-hidden h-auto md:h-[812px] z-10 bg-cover bg-center py-8 md:py-16" style={{ backgroundImage: "url('/Group146.png')" }}>
       {/* Overlay */}
-      <div className="absolute inset-0 bg-[#0a2540] bg-opacity-50"></div>
 
       {/* Marquee Container */}
       <div className="relative w-full mx-auto mt-5 md:mt-10 overflow-hidden">
@@ -74,6 +73,7 @@ export default function MarqueeSection() {
           </div>
         </div>
       </div>
+      <h1 className="source text-xl md:text-2xl font-normal text-white z-50 px-6 mt-10 md:mt-32 md:px-24 text-center">By choosing Photon Engineering Realm, you are partnering with a team that is passionate  about excellence and dedicated to enhancing the value of your projects. Let us help you build  your dream project today!</h1>
     </section>
   );
 }
