@@ -46,45 +46,45 @@ const ServiceCarousel = () => {
     {
       title: "HEATING, VENTILATION, AND AIR CONDITIONING (HVAC)",
       description: "Maintain optimal comfort and efficiency with PER's expert HVAC solutions. Our services include:",
-      src:"/contact"
+      src:"/services/HVAC"
     },
     {
       title: "FIRE SAFETY SYSTEMS",
       description: "Safety is at the core of our operations. PER provides comprehensive fire protection solutions to safeguard your assets and personnel.",
-      src:"/contact"
+      src:"/services/fire"
     },
     {
       title: "ELEVATORS AND ESCALATORS",
       description:
       "Whether for commercial or residential projects, we ensure reliable transportation and accessibility solutions.",
-      src:"/contact"
+      src:"/services/elevators"
     },
     {
       title: "Lightning Protection & Earth Grounding System Solutions",
       description: "Lightning protection and grounding systems to safeguard your assets and personnel.",
-      src:"/contact"
+      src:"/services/lightning"
     },
     {
       title: "BUILDING AUTOMATION",
       description:
       "Smart building solutions for enhanced efficiency and control.",
-      src:"/contact"
+      src:"/services/BMS"
     },
     {
       title: "Drainage & Sewerage Solutions",
       description: "Drainage and sewerage solutions for residential, commercial, and industrial projects.",
-      src:"/contact"
+      src:"/services/drainage"
     },
     {
       title: "Wind Powered Energy Solutions",
       description: "Harness the power of wind with our wind energy solutions.",
-      src:"/contact"
+      src:"/services/wind"
     },
     {
       title: "SOLAR ENERGY SOLUTIONS",
       description:
         "Embrace a sustainable future with our photovoltaic solar energy systems. From design to implementation, we provide cost-effective renewable energy solutions.",
-        src:"/contact"
+        src:"/services/solarpowered"
     },
   ];
 
