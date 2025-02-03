@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { ChevronLeft, ChevronRight,MoveRight } from 'lucide-react';
 import Image from 'next/image';
 
-const ServiceCard = ({ title, description, position }) => {
+const ServiceCard = ({ title, description, position,src }) => {
   // Calculate styles based on position (-1: left, 0: center, 1: right)
   const getStyles = () => {
     const baseScale = position === 0 ? 1 : 0.9;
@@ -25,7 +25,9 @@ const ServiceCard = ({ title, description, position }) => {
         <h2 className="text-[32px] leading-8 font-normal heading mb-9">{title}</h2>
         <p className="text-xl mb-8 detail font-normal leading-tight pr-9">{description}</p>
         <div className="flex-grow"></div>
-        <button className="px-4 py-2 border heading font-normal tracking-wide flex items-center gap-8 card-btn w-[228px] border-white rounded-full text-sm transition-colors duration-300">
+        <button
+        onClick={() => window.location.href = src}
+        className="px-4 py-2 border heading font-normal tracking-wide flex items-center gap-8 card-btn w-[228px] border-white rounded-full text-sm transition-colors duration-300">
           LEARN MORE
           <span>
             <img src="/Line 4.png" alt="" />
@@ -43,38 +45,46 @@ const ServiceCarousel = () => {
   const services = [
     {
       title: "HEATING, VENTILATION, AND AIR CONDITIONING (HVAC)",
-      description: "Maintain optimal comfort and efficiency with PER's expert HVAC solutions. Our services include:"
+      description: "Maintain optimal comfort and efficiency with PER's expert HVAC solutions. Our services include:",
+      src:"/contact"
     },
     {
       title: "FIRE SAFETY SYSTEMS",
-      description: "Safety is at the core of our operations. PER provides comprehensive fire protection solutions to safeguard your assets and personnel."
+      description: "Safety is at the core of our operations. PER provides comprehensive fire protection solutions to safeguard your assets and personnel.",
+      src:"/contact"
     },
     {
       title: "ELEVATORS AND ESCALATORS",
       description:
       "Whether for commercial or residential projects, we ensure reliable transportation and accessibility solutions.",
+      src:"/contact"
     },
     {
       title: "Lightning Protection & Earth Grounding System Solutions",
-      description: "Lightning protection and grounding systems to safeguard your assets and personnel."
+      description: "Lightning protection and grounding systems to safeguard your assets and personnel.",
+      src:"/contact"
     },
     {
       title: "BUILDING AUTOMATION",
       description:
       "Smart building solutions for enhanced efficiency and control.",
+      src:"/contact"
     },
     {
       title: "Drainage & Sewerage Solutions",
-      description: "Drainage and sewerage solutions for residential, commercial, and industrial projects."
+      description: "Drainage and sewerage solutions for residential, commercial, and industrial projects.",
+      src:"/contact"
     },
     {
       title: "Wind Powered Energy Solutions",
-      description: "Harness the power of wind with our wind energy solutions."
+      description: "Harness the power of wind with our wind energy solutions.",
+      src:"/contact"
     },
     {
       title: "SOLAR ENERGY SOLUTIONS",
       description:
         "Embrace a sustainable future with our photovoltaic solar energy systems. From design to implementation, we provide cost-effective renewable energy solutions.",
+        src:"/contact"
     },
   ];
 
@@ -90,7 +100,7 @@ const ServiceCarousel = () => {
 
   const getVisibleCards = () => {
     const totalCards = services.length;
-    const visibleIndexes = [-1, 0, 1]; // relative positions (left, center, right)
+    const visibleIndexes = [-3,-2,-1, 0, 1,2,3]; // relative positions (left, center, right)
     
     return visibleIndexes.map(relativePosition => {
       const index = (activeIndex + relativePosition + totalCards) % totalCards;
@@ -115,6 +125,7 @@ const ServiceCarousel = () => {
               title={service.title}
               description={service.description}
               position={service.position}
+              src={service.src}
             />
           ))}
         </div>
