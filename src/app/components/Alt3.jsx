@@ -21,13 +21,13 @@ const ServiceCard = ({ title, description, position,src }) => {
       className="absolute top-16 left-0 w-full transition-all duration-500 ease-in-out"
       style={getStyles()}
     >
-      <div className="h-[420px] p-6 flex flex-col card pt-12 rounded-[25px] text-white">
+      <div className="h-[420px] p-4 md:p-6 flex flex-col card pt-12 rounded-[25px] text-white">
         <h2 className="text-[32px] leading-8 font-normal heading mb-9">{title}</h2>
         <p className="text-xl mb-8 detail font-normal leading-tight pr-9">{description}</p>
         <div className="flex-grow"></div>
         <button
         onClick={() => window.location.href = src}
-        className="px-4 py-2 border heading font-normal tracking-wide flex items-center gap-8 card-btn w-[228px] border-white rounded-full text-sm transition-colors duration-300">
+        className="px-2 md:px-4 py-2 border heading font-normal tracking-wide flex items-center gap-8 card-btn w-[150px] md:w-[228px] border-white rounded-full text-sm transition-colors duration-300">
           LEARN MORE
           <span>
             <img src="/Line 4.png" alt="" />
@@ -113,12 +113,12 @@ const ServiceCarousel = () => {
   };
 
   return (
-    <div className="relative w-full h-[110vh] mx-auto overflow-hidden ">
+    <div className="relative w-full h-[110vh]  mx-auto overflow-hidden ">
          <h1 className="text-3xl md:text-6xl font-bold text-white  text-center tracking-wide">
           OUR EXPERTISE
         </h1>
-      <div className="relative px-12 md:px-0  h-full">
-        <div className="relative w-full md:w-1/4 mx-auto">
+      <div className="relative px-9 md:px-0  h-full">
+        <div className="relative w-full md:w-1/3 xl:w-1/4 mx-auto">
           {getVisibleCards().map((service) => (
             <ServiceCard
               key={service.index}
@@ -130,7 +130,7 @@ const ServiceCarousel = () => {
           ))}
         </div>
       </div>
-      <div className="flex justify-center bottom-36 left-1/2 z-50 -translate-x-1/2 absolute gap-2">
+      <div className="flex justify-center bottom-56 md:bottom-36 left-1/2 z-50 -translate-x-1/2 absolute gap-2">
           {services.map((_, index) => (
             <div
               key={index}
@@ -141,13 +141,13 @@ const ServiceCarousel = () => {
           ))}
         </div>
       {/* Navigation Controls - Moved below cards */}
-      <div className="flex justify-center bottom-10 left-1/2 z-50 -translate-x-1/2 absolute items-center gap-8">
+      <div className="flex justify-center bottom-36 md:bottom-10 left-1/2 z-50 -translate-x-1/2 absolute items-center gap-8">
         <button
           onClick={() => handleSlideChange('prev')}
           disabled={isAnimating}
           className="text-white hover:text-sky-400 transition-colors z-50 disabled:opacity-50"
         >
-          <ChevronLeft className="w-8 h-8 md:w-16 md:h-16" strokeWidth={3} />
+          <ChevronLeft className="w-16 h-16" strokeWidth={3} />
         </button>
 
         {/* Dots Indicators */}
@@ -158,22 +158,22 @@ const ServiceCarousel = () => {
           disabled={isAnimating}
           className="text-white hover:text-sky-400 z-50 transition-colors disabled:opacity-50"
         >
-          <ChevronRight className="w-8 h-8 md:w-16 md:h-16" strokeWidth={3} />
+          <ChevronRight className="w-16 h-16" strokeWidth={3} />
         </button>
       </div>
 
       {/* Background Images */}
-      <div className="absolute bottom-28"> 
+      <div className="absolute bottom-56 md:bottom-28"> 
         <Image 
           src="/grid.png" 
           alt="background grid" 
-          className="-z-10" 
+          className="-z-10 object-fill " 
           width={1920} 
           height={1080}
           priority
         />
       </div>
-      <div className="absolute -bottom-8 "> 
+      <div className="absolute bottom-52 md:-bottom-8 "> 
         <Image 
           src="/circle.png" 
           alt="background circle" 

@@ -5,9 +5,9 @@ import Circle from './Circle';
 
 const Footer = () => {
   return (
-    <div className="bg-[#0d2538] relative  h-screen z-0">
-        <div className='wrapper h-full md:h-[80%] z-50'>
-      <div className="footer bg-[#0d2538] grid grid-cols-1 md:grid-cols-3 gap-5 px-8 md:px-16 md:py-12 z-20">
+    <div className="bg-[#0d2538] relative h-screen z-0">
+        <div className='wrapper h-full  md:h-[80%] z-50'>
+      <div className="footer bg-[#0d2538] grid grid-cols-1 md:grid-cols-2 gap-5 px-8 md:px-16 py-3 md:py-12 z-20">
         {/* Column 1: Logo */}
         <div className="flex flex-col items-start">
           <div className="mb-4">
@@ -54,9 +54,9 @@ const Footer = () => {
               <input
                 type="email"
                 placeholder="ENTER YOUR GMAIL"
-                className="bg-[#0a2540] border w-[294px] border-[#F25525] placeholder:font-semibold placeholder:text-white text-white px-4 py-2  rounded-l-[99px] outline-none"
+                className="bg-[#0a2540] border w-[200px] md:w-[294px] border-[#F25525] placeholder:font-semibold placeholder:text-white text-white px-4 py-2  rounded-l-[99px] outline-none"
               />
-              <button className="bg-orange-500 uppercase font-bold w-[160px] -ml-7 border-2 text-white px-9 md:px-[47px] py-2 rounded-[99px] hover:bg-orange-600">
+              <button className="bg-orange-500 uppercase font-bold w-auto md:w-[160px] -ml-7 border-2 text-white px-6 md:px-[47px] py-2 rounded-[99px] hover:bg-orange-600">
                 Join Us
               </button>
             </div>
