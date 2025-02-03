@@ -104,8 +104,8 @@ const Footer = () => {
         <Circle bottom={10} right={30} />
         <Circle bottom={15} right={20} />
         <Circle bottom={20} right={15} />
-        <Circle bottom={25} right={10} />
-        <Circle bottom={28} right={0} />
+        <Circle bottom={18} right={10} />
+        <Circle bottom={18} right={0} />
     </div>
   );
 };
