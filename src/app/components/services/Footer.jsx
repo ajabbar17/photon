@@ -5,9 +5,9 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <div className="bg-[#0a2540] relative h-screen  z-0">
+    <div className="bg-[#0d2538] relative h-screen  z-0">
       <div className="wrapper h-full md:h-[80%] z-50">
-        <div className="footer bg-[#0a2540] grid  grid-cols-1 md:grid-cols-2 justify-between gap-10 px-8 md:px-12 py-6 md:py-12 z-20">
+        <div className="footer bg-[#0d2538] grid  grid-cols-1 md:grid-cols-2 justify-between gap-10 px-8 md:px-12 py-6 md:py-12 z-20">
           {/* Column 1: Logo */}
           <div className="flex flex-col text-white items-start max-w-[500px]">
             <div className="mb-4">

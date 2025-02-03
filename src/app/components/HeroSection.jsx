@@ -4,7 +4,7 @@ import Circle from './footer/Circle';
 
 const HeroSection = () => {
   return (
-    <div className="h-[110vh] bg-[#0a2540] relative  mb-10 z-40 overflow-hidden">
+    <div className="h-[110vh] bg-[#0d2538] relative  mb-10 z-40 overflow-hidden">
       {/* Hero Section */}
       <div className="relative h-[75vh] z-40 wrapper">
         <div className="absolute footer bg-[#F25525]">

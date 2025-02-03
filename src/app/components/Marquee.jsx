@@ -4,7 +4,7 @@ export default function MarqueeSection() {
   return (
     <section className="relative overflow-hidden h-auto md:h-[812px] z-10 bg-cover bg-center py-8 md:py-16" style={{ backgroundImage: "url('/Group146.png')" }}>
       {/* Overlay */}
-      <div className="absolute inset-0 bg-[#0a2540] bg-opacity-80"></div>
+      <div className="absolute inset-0 bg-[#0a2540] bg-opacity-50"></div>
 
       {/* Marquee Container */}
       <div className="relative w-full mx-auto mt-5 md:mt-10 overflow-hidden">

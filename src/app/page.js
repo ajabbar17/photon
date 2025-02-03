@@ -11,7 +11,7 @@ import ServiceCarousel from "./components/Alt3";
 export default function Home() {
   
   return (
-    <div className="bg-[#0a2540]">
+    <div className="bg-[#0d2538]">
       <Navbar />
       <HeroSection />
      <Welcome />

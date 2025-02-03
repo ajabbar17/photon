@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Welcome() {
     return (
-      <section className="bg-[#0a2540]  flex md:flex-row flex-col justify-between gap-4 md:gap-0  text-white py-9 md:py-20 px-6 md:px-16">
+      <section className="bg-[#0d2538]  flex md:flex-row flex-col justify-between gap-4 md:gap-0  text-white py-9 md:py-20 px-6 md:px-16">
         <div className=" w-full  md:w-1/2 flex flex-col justify-center items-center md:items-start text-center md:text-left">
           <h1 className="text-3xl md:text-5xl font-bold leading-tight">
             Welcome to Photon Engineering Realm,
