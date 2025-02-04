@@ -1,11 +1,48 @@
 "use client"
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Menu, X } from "lucide-react";
+import gsap from "gsap";
 
 export default function Navbar() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const logoRef = useRef(null);
+  const navLinksRef = useRef([]);
+  
+  useEffect(() => {
+    const tl = gsap.timeline();
+
+    tl.fromTo(
+      logoRef.current,
+      {
+        y: -50,
+        opacity: 0
+      },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 0.8,
+        ease: "power3.out"
+      }
+    ).fromTo(
+      navLinksRef.current,
+      {
+        y: -50,
+        opacity: 0
+      },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 0.6,
+        stagger: 0.1,
+        ease: "power2.out"
+      },
+      "-=0.4"
+    );
+
+    return () => tl.kill();
+  }, []);
 
   const toggleSidebar = () => setIsSidebarOpen(!isSidebarOpen);
 
@@ -13,7 +50,7 @@ export default function Navbar() {
     <>
       <nav className="absolute top-0 left-0 w-full flex items-center z-50 px-8 py-6 text-white">
         {/* Logo */}
-        <div className="w-[150px]">
+        <div ref={logoRef} className="w-[150px] opacity-0">
           <Link href="/">
             <Image src="/logofooter.png" width={150} height={50} alt="Logo" />
           </Link>
@@ -22,10 +59,17 @@ export default function Navbar() {
         {/* Desktop Navigation Links */}
         <div className="flex-1 flex justify-center">
           <ul className="hidden md:flex gap-8 detail font-normal text-lg">
-            <li><Link href="/">Home</Link></li>
-            <li><Link href="/about">About</Link></li>
-            <li><Link href="/services">Services</Link></li>
-            <li><Link href="/contact">Contact</Link></li>
+            {['Home', 'About', 'Services', 'Contact'].map((item, index) => (
+              <li key={item}>
+                <Link 
+                  href={item === 'Home' ? '/' : `/${item.toLowerCase()}`}
+                  ref={el => navLinksRef.current[index] = el}
+                  className="opacity-0"
+                >
+                  {item}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
 

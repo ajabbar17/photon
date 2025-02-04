@@ -1,5 +1,8 @@
+"use client"
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 export default function ContactInfo({
   imageUrl,
@@ -8,10 +11,56 @@ export default function ContactInfo({
   span,
   spandetail,
 }) {
+  const imageRef = useRef(null);
+  const contentRef = useRef(null);
+
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: imageRef.current,
+        start: "top 80%",
+        end: "bottom 20%",
+        toggleActions: "play none none reverse"
+      }
+    });
+
+    tl.fromTo(imageRef.current,
+      {
+        x: -100,
+        opacity: 0
+      },
+      {
+        x: 0,
+        opacity: 1,
+        duration: 1,
+        ease: "power3.out"
+      }
+    ).fromTo(contentRef.current,
+      {
+        x: 100,
+        opacity: 0
+      },
+      {
+        x: 0,
+        opacity: 1,
+        duration: 1,
+        ease: "power3.out"
+      },
+      "-=0.5"
+    );
+
+    return () => {
+      tl.kill();
+      ScrollTrigger.killAll();
+    };
+  }, []);
+
   return (
-    <section className="bg-[#0d2538] text-white py-16 px-6 md:px-10 flex flex-col md:flex-row items-center gap-10">
+    <section className="bg-[#0d2538] text-white py-16 px-6 md:px-10 flex flex-col md:flex-row items-center gap-10 overflow-hidden">
       {/* Image Section */}
-      <div className="">
+      <div ref={imageRef} className="opacity-0">
         <Image
           src={imageUrl}
           width={567}
@@ -22,7 +71,7 @@ export default function ContactInfo({
       </div>
 
       {/* Text Section */}
-      <div className="w-full text-white md:w-1/2">
+      <div ref={contentRef} className="w-full text-white md:w-1/2 opacity-0">
         <h2 className="text-3xl md:text-5xl leading-10 source font-bold mb-4">
           {title}
         </h2>

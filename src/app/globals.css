@@ -41,13 +41,15 @@ background-blend-mode: screen;
 
 }
 .card{
-  background: linear-gradient(0deg, #3094CF, #3094CF),
-  conic-gradient(from 181.06deg at 50% 50%, #0283C5 0deg, rgba(0, 0, 0, 0) 172.66deg, #0D3147 281.25deg, #0283C5 360deg);
-  }
+  border-radius: 27px;
+  border: 1px solid rgba(255, 255, 255, 0.20);
+  background: conic-gradient(from 181deg at 50% 50%, rgba(0, 0, 0, 0.00) 172.66420125961304deg, rgba(13, 49, 71, 0.30) 281.25deg, rgba(2, 131, 197, 0.30) 360deg), #3094CF;
+  box-shadow: 0px 4px 4.8px 5px rgba(0, 0, 0, 0.28);}
 
 .carousel-card{
-  background: rgb(4,38,57);
-background: linear-gradient(91deg, rgba(4,38,57,1) 0%, rgba(48,147,206,1) 48%);
+  background: linear-gradient(0deg, #3094CF, #3094CF),
+conic-gradient(from 181.06deg at 50% 50%, #0283C5 0deg, rgba(0, 0, 0, 0) 172.66deg, #0D3147 281.25deg, #0283C5 360deg);
+
 }
 
 @keyframes marquee {
@@ -78,7 +80,7 @@ background: linear-gradient(340deg, rgb(2, 78, 116) 1%, rgba(0,42,66,1) 46%);
   }
 
   .footer {
-    height: 97%;
+    height: 98%;
     width: 100%;
     clip-path: ellipse(65% 100% at 50% 0%);
   }

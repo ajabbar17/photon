@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import Circle from './Circle';
+import Circle2 from './Circle2';
 
 const Footer = () => {
   return (
@@ -106,6 +107,8 @@ const Footer = () => {
         <Circle bottom={20} right={15} />
         <Circle bottom={18} right={10} />
         <Circle bottom={18} right={0} />
+        <Circle2 bottom={17} right={30} />
+        <Circle2 bottom={20} right={35} />
     </div>
   );
 };

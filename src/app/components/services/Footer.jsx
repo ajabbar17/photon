@@ -34,12 +34,12 @@ const Footer = () => {
           {/* Column 2: Email Subscription and Social Media Icons */}
           <div className="text-white w-full flex flex-col items-end ">
             {/* Email Subscription */}
-            <div className="md:mt-24 w-full flex justify-end">
+            <div className="md:mt-24 w-full flex justify-start md:justify-end">
               <div className="flex">
                 <input
                   type="email"
                   placeholder="ENTER YOUR GMAIL"
-                  className="bg-[#0a2540] border w-[294px] border-[#F25525] placeholder:font-semibold placeholder:text-white text-white px-4 py-2  rounded-l-[99px] outline-none"
+                  className="bg-[#0a2540] border w-[200px] xl:w-[294px] border-[#F25525] placeholder:font-semibold placeholder:text-white text-white px-4 py-2  rounded-l-[99px] outline-none"
                 />
                 <button className="bg-orange-500 uppercase font-bold w-[160px] -ml-7 border-2 text-white px-9 md:px-[47px] py-2 rounded-[99px] hover:bg-orange-600">
                   Join Us
