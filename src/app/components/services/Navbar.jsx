@@ -7,9 +7,22 @@ import gsap from "gsap";
 
 export default function Navbar() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
   const logoRef = useRef(null);
   const navLinksRef = useRef([]);
-  
+
+  const serviceLinks = [
+    { href: "/services/solarpowered", text: "Solar Powered System Solutions" },
+    { href: "/services/HVAC", text: "HVAC Services" },
+    { href: "/services/elevators", text: "Elevators and Escalators" },
+    { href: "/services/fire", text: "Fire Safety Services" },
+    { href: "/services/wind", text: "Wind Powered Energy Solutions" },
+    { href: "/services/BMS", text: "BMS" },
+    { href: "/services/lightning", text: "Lightning Protection System" },
+    { href: "/services/drainage", text: "Plumbing, Water Supply & Drainage Solutions" },
+  ];
+
   useEffect(() => {
     const tl = gsap.timeline();
 
@@ -45,6 +58,7 @@ export default function Navbar() {
   }, []);
 
   const toggleSidebar = () => setIsSidebarOpen(!isSidebarOpen);
+  const toggleMobileServices = () => setIsMobileServicesOpen(!isMobileServicesOpen);
 
   return (
     <>
@@ -59,17 +73,43 @@ export default function Navbar() {
         {/* Desktop Navigation Links */}
         <div className="flex-1 flex justify-center">
           <ul className="hidden md:flex gap-8 detail font-normal text-lg">
-            {['Home', 'About', 'Services', 'Contact'].map((item, index) => (
-              <li key={item}>
-                <Link 
-                  href={item === 'Home' ? '/' : `/${item.toLowerCase()}`}
-                  ref={el => navLinksRef.current[index] = el}
-                  className="opacity-0"
+            <li>
+              <Link href="/" ref={el => navLinksRef.current[0] = el} className="opacity-0">
+                Home
+              </Link>
+            </li>
+            <li className="relative">
+              <button
+                onMouseEnter={() => setIsDropdownOpen(true)}
+                onMouseLeave={() => setIsDropdownOpen(false)}
+                className="text-white opacity-0"
+                ref={el => navLinksRef.current[1] = el}
+              >
+                Services
+              </button>
+              {isDropdownOpen && (
+                <div
+                  onMouseEnter={() => setIsDropdownOpen(true)}
+                  onMouseLeave={() => setIsDropdownOpen(false)}
+                  className="absolute top-full left-0 w-72 bg-[#0a2540] rounded-lg shadow-lg py-2 "
                 >
-                  {item}
-                </Link>
-              </li>
-            ))}
+                  {serviceLinks.map((link) => (
+                    <Link
+                      key={link.href}
+                      href={link.href}
+                      className="block px-4 py-2 text-sm text-gray-300 hover:text-white  detail"
+                    >
+                      {link.text}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </li>
+            <li>
+              <Link href="/contact" ref={el => navLinksRef.current[2] = el} className="opacity-0">
+                Contact
+              </Link>
+            </li>
           </ul>
         </div>
 
@@ -85,23 +125,41 @@ export default function Navbar() {
       </nav>
 
       {/* Sliding Sidebar */}
-      <div className={`
-        fixed top-0 right-0 h-full w-64 bg-[#0a2540] z-50
-        transform transition-transform duration-300 ease-in-out
-        ${isSidebarOpen ? 'translate-x-0' : 'translate-x-full'}
-      `}>
-        {/* Sidebar Header */}
+      <div className={`fixed top-0 right-0 h-full w-64 bg-[#0a2540] z-50 transform transition-transform duration-300 ease-in-out ${isSidebarOpen ? 'translate-x-0' : 'translate-x-full'} overflow-y-auto`}>
         <div className="flex justify-end p-4">
           <button onClick={toggleSidebar} className="text-white">
             <X size={24} />
           </button>
         </div>
 
-        {/* Sidebar Navigation Links */}
         <ul className="flex flex-col gap-4 p-8 text-white">
           <li><Link href="/" onClick={toggleSidebar}>Home</Link></li>
-          <li><Link href="/about" onClick={toggleSidebar}>About</Link></li>
-          <li><Link href="/services" onClick={toggleSidebar}>Services</Link></li>
+          <li>
+            <button 
+              onClick={toggleMobileServices}
+              className="flex items-center justify-between w-full mb-2 font-semibold detail text-white"
+            >
+              Services
+              <span className={`transition-transform duration-300 ${isMobileServicesOpen ? 'rotate-180' : ''}`}>
+                ▼
+              </span>
+            </button>
+            <ul className={`pl-4 space-y-2 overflow-hidden transition-all duration-300 ${
+              isMobileServicesOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+            }`}>
+              {serviceLinks.map((link) => (
+                <li key={link.href}>
+                  <Link 
+                    href={link.href}
+                    onClick={toggleSidebar}
+                    className="text-sm detail"
+                  >
+                    {link.text}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </li>
           <li><Link href="/contact" onClick={toggleSidebar}>Contact</Link></li>
         </ul>
       </div>

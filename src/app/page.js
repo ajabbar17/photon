@@ -8,6 +8,7 @@ import Navbar from "./components/Navbar";
 import ServiceCarousel from "./components/Alt3";
 import Alt1 from "./components/Alt1";
 import Image from "next/image";
+import Alt4 from "./components/Alt4";
 
 
 export default function Home() {
@@ -22,7 +23,8 @@ export default function Home() {
         alt="hero" />
       <HeroSection />
      <Welcome />
-     <ServiceCarousel />
+     {/* <ServiceCarousel /> */}
+     <Alt4 />
      <MarqueeSection />
      <Footer />
      {/* <Alt1 /> */}

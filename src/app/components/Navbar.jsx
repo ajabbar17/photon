@@ -8,11 +8,24 @@ import gsap from 'gsap'
 const Navbar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
   const navLinksRef = useRef([]);
   const logoRef = useRef(null);
   const timeline = useRef(null);
 
-  const navItems = ['Home', 'Services', 'Contact'];
+  const serviceLinks = [
+    { href: "/services/solarpowered", text: "Solar Powered System Solutions" },
+    { href: "/services/HVAC", text: "HVAC Services" },
+    { href: "/services/elevators", text: "Elevators and Escalators" },
+    { href: "/services/fire", text: "Fire Safety Services" },
+    { href: "/services/wind", text: "Wind Powered Energy Solutions" },
+    { href: "/services/BMS", text: "BMS" },
+    { href: "/services/lightning", text: "Lightning Protection System" },
+    { href: "/services/drainage", text: "Plumbing, Water Supply & Drainage Solutions" },
+  ];
+
+  const navItems = ['Home', 'Contact'];
 
   useEffect(() => {
     timeline.current = gsap.timeline();
@@ -64,10 +77,16 @@ const Navbar = () => {
   }, []);
 
   const toggleSidebar = () => setIsSidebarOpen(!isSidebarOpen);
+  const toggleMobileServices = () => {
+    setIsMobileServicesOpen(!isMobileServicesOpen);
+  };
 
   return (
     <>
-      <nav className={`px-6 py-4 bg-transparent z-50 ${!isScrolled ? 'fixed' : 'absolute top-0'} w-full`}>
+      {/* Main Navigation */}
+      <nav className={`px-6 py-4 bg-transparent w-full z-50 transition-colors duration-300 ${
+        isScrolled ? 'absolute top-0' : 'fixed'
+      }`}>
         <div className="max-w-[1920px] mx-auto flex items-center justify-between md:justify-start">
           <div ref={logoRef} className="text-2xl font-bold md:w-1/4 opacity-0">
             <Link href="/">
@@ -77,16 +96,52 @@ const Navbar = () => {
           
           {/* Desktop Navigation */}
           <div className="hidden md:flex gap-8 z-50 justify-center w-2/4">
-            {navItems.map((item, index) => (
-              <Link 
-                key={item} 
-                ref={el => navLinksRef.current[index] = el}
-                href={item === 'Home' ? '/' : `/${item.toLowerCase()}`} 
+            {/* Home Link */}
+            <Link 
+              href="/"
+              ref={el => navLinksRef.current[0] = el}
+              className="text-[#0c1b34] z-50 detail opacity-0"
+            >
+              Home
+            </Link>
+
+            {/* Services Dropdown */}
+            <div className="relative">
+              <button
+                onMouseEnter={() => setIsDropdownOpen(true)}
+                onMouseLeave={() => setIsDropdownOpen(false)}
                 className="text-[#0c1b34] z-50 detail opacity-0"
+                ref={el => navLinksRef.current[1] = el}
               >
-                {item}
-              </Link>
-            ))}
+                Services
+              </button>
+              {isDropdownOpen && (
+                <div
+                  onMouseEnter={() => setIsDropdownOpen(true)}
+                  onMouseLeave={() => setIsDropdownOpen(false)}
+                  className="absolute top-full left-0 w-72 bg-[#d44b22] rounded-lg shadow-lg py-2"
+                >
+                  {serviceLinks.map((link) => (
+                    <Link
+                      key={link.href}
+                      href={link.href}
+                      className="block px-4 py-2 text-sm text-[#0c1b34] hover:text-white detail"
+                    >
+                      {link.text}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {/* Contact Link */}
+            <Link 
+              href="/contact"
+              ref={el => navLinksRef.current[2] = el}
+              className="text-[#0c1b34] z-50 detail opacity-0"
+            >
+              Contact
+            </Link>
           </div>
           
           {/* Mobile Menu Button */}
@@ -103,25 +158,42 @@ const Navbar = () => {
       </nav>
 
       {/* Sliding Sidebar */}
-      <div className={`fixed top-0 right-0 h-full w-64 bg-[#F25525] z-50 transform transition-transform duration-300 ease-in-out ${isSidebarOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+      <div className={`fixed top-0 right-0 h-full w-64 bg-[#0c1b34] z-50 transform transition-transform duration-300 ease-in-out ${isSidebarOpen ? 'translate-x-0' : 'translate-x-full'} overflow-y-auto`}>
         <div className="flex justify-end p-4">
-          <button onClick={toggleSidebar} className="text-[#0c1b34]">
+          <button onClick={toggleSidebar} className="text-[#fff]">
             <X size={24} />
           </button>
         </div>
 
-        <ul className="flex flex-col gap-4 p-8 text-[#0c1b34]">
-          {navItems.map((item) => (
-            <li key={item}>
-              <Link 
-                href={item === 'Home' ? '/' : `/${item.toLowerCase()}`}
-                onClick={toggleSidebar}
-                className="detail"
-              >
-                {item}
-              </Link>
-            </li>
-          ))}
+        <ul className="flex flex-col gap-4 p-8 text-[#fff]">
+          <li><Link href="/" onClick={toggleSidebar} className="detail">Home</Link></li>
+          <li>
+            <button 
+              onClick={toggleMobileServices}
+              className="flex items-center justify-between w-full mb-2 font-semibold detail"
+            >
+              Services
+              <span className={`transition-transform duration-300 ${isMobileServicesOpen ? 'rotate-180' : ''}`}>
+                ▼
+              </span>
+            </button>
+            <ul className={`pl-4 space-y-2 overflow-hidden transition-all duration-300 ${
+              isMobileServicesOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+            }`}>
+              {serviceLinks.map((link) => (
+                <li key={link.href}>
+                  <Link 
+                    href={link.href}
+                    onClick={toggleSidebar}
+                    className="text-sm detail"
+                  >
+                    {link.text}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </li>
+          <li><Link href="/contact" onClick={toggleSidebar} className="detail">Contact</Link></li>
         </ul>
       </div>
 
