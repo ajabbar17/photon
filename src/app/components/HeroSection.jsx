@@ -47,7 +47,7 @@ const HeroSection = () => {
   return (
     <div className="h-[110vh] bg-[#0d2538] relative top-0 mb-10 z-30 overflow-hidden">
       {/* Hero Section */}
-      <div className="relative h-[68vh] md:h-[85vh] z-40 wrapper">
+      <div className="relative h-[68vh] md:h-[80vh] z-40 wrapper">
         <div className="absolute footer bg-[#F25525]">
           <div className="absolute top-[25%] overflow-hidden text-[#042538] left-1/2 transform -translate-x-1/2 w-full text-center px-6">
             <h1 
@@ -69,7 +69,7 @@ const HeroSection = () => {
       </div>
 
       {/* Circle with arrow */}
-      <div className="absolute bottom-64 md:bottom-44 xl:bottom-32 2xl:bottom-52 left-1/2 transform -translate-x-1/2 z-50">
+      <div className="absolute bottom-64 md:bottom-44 xl:bottom-32 2xl:bottom-44 left-1/2 transform -translate-x-1/2 z-50">
         <div className="w-24 h-24 rounded-full bg-[#f25525] border-[1.5px] flex items-center justify-center shadow-lg">
           <MoveDown size={69} strokeWidth={1} className="text-white" />
         </div>
@@ -82,8 +82,8 @@ const HeroSection = () => {
         <Circle bottom={29} right={15} />
         <Circle bottom={30} right={10} />
         <Circle bottom={35} right={0} />
-        <Circle2 bottom={30} right={30} />
-        <Circle2 bottom={32} right={35} />
+        <Circle2 bottom={28} right={30} />
+        <Circle2 bottom={28} right={35} />
             </div>
   );
 };

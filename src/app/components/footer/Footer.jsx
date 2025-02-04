@@ -99,8 +99,7 @@ const Footer = () => {
         </div>
       </div>
       </div>
-      <Circle bottom={0} right={40} />
-        <Circle bottom={10} right={44} />
+      <Circle bottom={0} right={35} />
         <Circle bottom={10} right={48} />
         <Circle bottom={10} right={30} />
         <Circle bottom={15} right={20} />

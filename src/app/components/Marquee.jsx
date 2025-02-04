@@ -2,7 +2,7 @@ import React from "react";
 
 export default function MarqueeSection() {
   return (
-    <section className="relative overflow-hidden h-auto md:h-[812px] z-10 bg-cover bg-center py-8 md:py-16" style={{ backgroundImage: "url('/Group146.png')" }}>
+    <section className="relative overflow-hidden h-auto md:h-[812px]  z-50 bg-cover bg-center py-8 md:py-16" style={{ backgroundImage: "url('/Group146.png')" }}>
       {/* Overlay */}
 
       {/* Marquee Container */}

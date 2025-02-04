@@ -1,14 +1,16 @@
 import React from 'react'
 
 const Circle = ({bottom, right}) => {
-return (
-    //take the bottom and right props and use template strings to apply styles
+  return (
     <div 
-        className='w-[150px] h-[100px] md:w-[390px] md:h-[370px]  block rounded-full -z-10 blur-[80px] bg-[#FB5421] absolute'
-        style={{ bottom: `${bottom}%`, right: `${right}%` }}
+      className='w-[150px] h-[100px] md:w-[390px] md:h-[370px] xl:w-[400px] xl:h-[400px] block rounded-full -z-10 blur-[80px] bg-[#FB5421] absolute'
+      style={{ 
+        bottom: `clamp(${bottom}vh, ${bottom}%, ${bottom * 1.5}vh)`,
+        right: `clamp(${right}vw, ${right}%, ${right * 1.5}vw)`
+      }}
     >
     </div>
-)
+  )
 }
 
 export default Circle
