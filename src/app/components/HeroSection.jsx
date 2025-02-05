@@ -69,7 +69,7 @@ const HeroSection = () => {
       </div>
 
       {/* Circle with arrow */}
-      <div className="absolute bottom-64 md:bottom-44 xl:bottom-32 2xl:bottom-48 left-1/2 transform -translate-x-1/2 z-50">
+      <div className="absolute bottom-64 md:bottom-44 xl:bottom-40 arrow-circle  left-1/2 transform -translate-x-1/2 z-50">
         <div className="w-24 h-24 rounded-full bg-[#f25525] border-[1.5px] flex items-center justify-center shadow-lg">
           <MoveDown size={69} strokeWidth={1} className="text-white" />
         </div>
