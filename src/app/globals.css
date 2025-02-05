@@ -164,11 +164,27 @@ background: linear-gradient(340deg, rgb(2, 78, 116) 1%, rgba(0,42,66,1) 46%);
     color: inherit;
   }
 
+  /* Circle Arrow Positioning */
+.circle-arrow {
+  bottom: 16rem; /* equivalent to bottom-64 */
+}
 
-
-
-  @media (min-width: 2000px) {
-    .circle-arrow {
-      bottom: 15rem !important; /* Adjust the value as needed */
-    }
+@media (min-width: 768px) {
+  .circle-arrow {
+    bottom: 11rem; /* equivalent to md:bottom-44 */
   }
+}
+
+@media (min-width: 1280px) {
+  .circle-arrow {
+    bottom: 10rem; /* equivalent to xl:bottom-40 */
+  }
+}
+
+@media (min-width: 2000px) {
+  .circle-arrow {
+    bottom: 15rem;
+  }
+}
+
+ 
