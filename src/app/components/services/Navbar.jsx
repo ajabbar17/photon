@@ -10,7 +10,7 @@ export default function Navbar() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
   const logoRef = useRef(null);
-  const navLinksRef = useRef([]);
+  const navRef = useRef(null);
 
   const serviceLinks = [
     { href: "/services/solarpowered", text: "Solar Powered System Solutions" },
@@ -24,37 +24,17 @@ export default function Navbar() {
   ];
 
   useEffect(() => {
-    const tl = gsap.timeline();
+    gsap.set([logoRef.current, navRef.current], {
+      y: -100,
+      opacity: 0
+    });
 
-    tl.fromTo(
-      logoRef.current,
-      {
-        y: -50,
-        opacity: 0
-      },
-      {
-        y: 0,
-        opacity: 1,
-        duration: 0.8,
-        ease: "power3.out"
-      }
-    ).fromTo(
-      navLinksRef.current,
-      {
-        y: -50,
-        opacity: 0
-      },
-      {
-        y: 0,
-        opacity: 1,
-        duration: 0.6,
-        stagger: 0.1,
-        ease: "power2.out"
-      },
-      "-=0.4"
-    );
-
-    return () => tl.kill();
+    gsap.to([logoRef.current, navRef.current], {
+      y: 0,
+      opacity: 1,
+      duration: 0.9,
+      ease: "power3.out"
+    });
   }, []);
 
   const toggleSidebar = () => setIsSidebarOpen(!isSidebarOpen);
@@ -63,18 +43,16 @@ export default function Navbar() {
   return (
     <>
       <nav className="absolute top-0 left-0 w-full flex items-center z-50 px-8 py-6 text-white">
-        {/* Logo */}
-        <div ref={logoRef} className="w-[150px] opacity-0">
+        <div ref={logoRef} className="w-[150px]">
           <Link href="/">
             <Image src="/logofooter.png" width={150} height={50} alt="Logo" />
           </Link>
         </div>
 
-        {/* Desktop Navigation Links */}
         <div className="flex-1 flex justify-center">
-          <ul className="hidden md:flex gap-8 detail font-normal text-lg">
+          <ul ref={navRef} className="hidden md:flex gap-8 detail font-normal text-lg">
             <li>
-              <Link href="/" ref={el => navLinksRef.current[0] = el} className="opacity-0">
+              <Link href="/">
                 Home
               </Link>
             </li>
@@ -82,8 +60,7 @@ export default function Navbar() {
               <button
                 onMouseEnter={() => setIsDropdownOpen(true)}
                 onMouseLeave={() => setIsDropdownOpen(false)}
-                className="text-white opacity-0"
-                ref={el => navLinksRef.current[1] = el}
+                className="text-white"
               >
                 Services
               </button>
@@ -91,13 +68,13 @@ export default function Navbar() {
                 <div
                   onMouseEnter={() => setIsDropdownOpen(true)}
                   onMouseLeave={() => setIsDropdownOpen(false)}
-                  className="absolute top-full left-0 w-72 bg-[#0a2540] rounded-lg shadow-lg py-2 "
+                  className="absolute top-full left-0 w-72 bg-[#0a2540] rounded-lg shadow-lg py-2"
                 >
                   {serviceLinks.map((link) => (
                     <Link
                       key={link.href}
                       href={link.href}
-                      className="block px-4 py-2 text-sm text-gray-300 hover:text-white  detail"
+                      className="block px-4 py-2 text-sm text-gray-300 hover:text-white detail"
                     >
                       {link.text}
                     </Link>
@@ -106,14 +83,13 @@ export default function Navbar() {
               )}
             </li>
             <li>
-              <Link href="/contact" ref={el => navLinksRef.current[2] = el} className="opacity-0">
+              <Link href="/contact">
                 Contact
               </Link>
             </li>
           </ul>
         </div>
 
-        {/* Mobile Menu Button */}
         <div className="md:w-[150px] flex justify-end">
           <button 
             onClick={toggleSidebar}
@@ -124,7 +100,6 @@ export default function Navbar() {
         </div>
       </nav>
 
-      {/* Sliding Sidebar */}
       <div className={`fixed top-0 right-0 h-full w-64 bg-[#0a2540] z-50 transform transition-transform duration-300 ease-in-out ${isSidebarOpen ? 'translate-x-0' : 'translate-x-full'} overflow-y-auto`}>
         <div className="flex justify-end p-4">
           <button onClick={toggleSidebar} className="text-white">
@@ -164,7 +139,6 @@ export default function Navbar() {
         </ul>
       </div>
 
-      {/* Overlay */}
       {isSidebarOpen && (
         <div 
           className="fixed inset-0 bg-black bg-opacity-50 z-40 md:hidden"

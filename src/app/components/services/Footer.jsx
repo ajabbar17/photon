@@ -1,9 +1,14 @@
+"use client"
 import Image from "next/image";
 import React from "react";
 import Circle from "../footer/Circle";
 import Link from "next/link";
+import Circle2 from "../footer/Circle2";
 
 const Footer = () => {
+  const handleEmailClick = () => {
+    window.location.href = "mailto:info@per.com.pk";
+  };
   return (
     <div className="bg-[#0d2538] relative h-screen  z-0">
       <div className="wrapper h-full md:h-[80%] z-50">
@@ -26,7 +31,9 @@ const Footer = () => {
               more about our solar panel services and how we can help you build
               your dream project.
             </p>
-            <button className="mt-8 px-4 py-3 w-[156px] source h-[47px] bg-[#f25525] text-white text-base font-normal rounded-3xl hover:bg-[#C6370C] transition">
+            <button 
+            onClick={handleEmailClick}
+            className="mt-8 px-4 py-3 w-[156px] source h-[47px] bg-[#f25525] text-white text-base font-normal rounded-3xl hover:bg-[#C6370C] transition">
             Get Started Today
           </button>
           </div>
@@ -49,17 +56,17 @@ const Footer = () => {
 
             {/* Social Media Icons */}
             <div className="flex mt-10 mb-20 md:mr-72 space-x-4">
-              <Link href="#" className="text-white text-xl hover:text-gray-300">
+              <Link href="https://www.instagram.com/photonengineeringrealm?igsh=ZjZ1NWVtd3Ywd2U2" target="_blank" className="text-white text-xl hover:text-gray-300">
                 <i className="fab fa-instagram">
                   <Image src="/ig.png" alt="Instagram" width={32} height={32} />
                 </i>
               </Link>
-              <Link href="#" className="text-white text-xl hover:text-gray-300">
+              <Link href="https://www.linkedin.com/company/photon-engineering-realm/" target="_blank" className="text-white text-xl hover:text-gray-300">
                 <i className="fab fa-linkedin">
                   <Image src="/in.png" alt="LinkedIn" width={32} height={32} />
                 </i>
               </Link>
-              <Link href="#" className="text-white text-xl  hover:text-gray-300">
+              <Link href="https://www.facebook.com/share/14vj9njXZR/?mibextid=wwXIfr" target="_blank" className="text-white text-xl  hover:text-gray-300">
                 <i className="fab fa-facebook">
                   <Image src="/fb.png" alt="facebook" width={32} height={32} />
                 </i>
@@ -76,6 +83,8 @@ const Footer = () => {
       <Circle bottom={20} right={15} />
       <Circle bottom={25} right={10} />
       <Circle bottom={28} right={0} />
+      <Circle2 bottom={17} right={30} />
+        <Circle2 bottom={20} right={35} />
     </div>
   );
 };

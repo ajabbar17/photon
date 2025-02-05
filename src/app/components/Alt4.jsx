@@ -105,11 +105,11 @@ const Alt4 = ({ active: initialActive = 0 }) => {
   const [active, setActive] = useState(initialActive);
 
   const moveLeft = () => {
-    setActive((prev) => (prev === 0 ? services.length - 1 : prev - 1));
+    setActive((prev) => (prev === 0 ? services.length - 1 : prev + 1));
   };
 
   const moveRight = () => {
-    setActive((prev) => (prev + 1) % services.length);
+    setActive((prev) => (prev - 1) % services.length);
   };
 
   const generateItems = () => {
@@ -132,7 +132,7 @@ const Alt4 = ({ active: initialActive = 0 }) => {
   };
 
   return (
-    <div className="relative h-screen w-full py-4  pt-16 overflow-hidden select-none">
+    <div className="relative h-screen w-full py-4 flex flex-col  pt-16 overflow-hidden select-none">
       <div className="absolute inset-0 flex flex-col  items-center justify-center">
         <div className="relative h-full w-full">{generateItems()}</div>
 
@@ -152,17 +152,19 @@ const Alt4 = ({ active: initialActive = 0 }) => {
           </button>
         </div>
       </div>
-      <div className="absolute bottom-56 md:bottom-28 3xl:bottom-64">
+
+      <div className="absolute bottom-20 md:bottom-28 3xl:bottom-64">
         <Image
           src="/grid.png"
           alt="background grid"
-          className="-z-10 object-fill "
+          className="-z-10 h-auto "
           width={1920}
           height={1080}
+          
           priority
-        />
+          />
       </div>
-      <div className="absolute bottom-52 md:-bottom-8 3xl:bottom-36">
+      <div className="absolute bottom-16  md:bottom-8 3xl:bottom-36">
         <Image
           src="/circle.png"
           alt="background circle"
@@ -170,7 +172,7 @@ const Alt4 = ({ active: initialActive = 0 }) => {
           width={1920}
           height={1080}
           priority
-        />
+          />
       </div>
     </div>
   );

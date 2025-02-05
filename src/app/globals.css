@@ -115,7 +115,7 @@ background: linear-gradient(340deg, rgb(2, 78, 116) 1%, rgba(0,42,66,1) 46%);
   /* Media query for mobile screens */
   @media (max-width: 768px) {
     .footer {
-      height: 97%;
+      height: 98%;
 
       clip-path: ellipse(100% 100% at 50% 0%);
     }
@@ -166,12 +166,12 @@ background: linear-gradient(340deg, rgb(2, 78, 116) 1%, rgba(0,42,66,1) 46%);
 
   /* Circle Arrow Positioning */
 .circle-arrow {
-  bottom: 16rem; /* equivalent to bottom-64 */
+  bottom: 36vh; /* equivalent to bottom-64 */
 }
 
 @media (min-width: 768px) {
   .circle-arrow {
-    bottom: 11rem; /* equivalent to md:bottom-44 */
+    bottom: 29vh; /* equivalent to md:bottom-44 */
   }
 }
 

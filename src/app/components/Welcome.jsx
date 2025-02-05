@@ -51,10 +51,10 @@ export default function Welcome() {
     }, []);
 
     return (
-      <section className="bg-[#0d2538] overflow-hidden flex md:flex-row flex-col justify-between gap-4 md:gap-0 text-white py-9 md:py-20 px-6 md:px-16">
+      <section className="bg-[#0d2538] overflow-hidden flex xl:flex-row flex-col justify-between gap-4 xl:gap-0 text-white py-9 md:py-20 px-6 md:px-10 xl:px-16">
         <div 
           ref={contentRef}
-          className="w-full md:w-1/2 flex flex-col justify-center items-center md:items-start text-center md:text-left opacity-0"
+          className="w-full  xl:w-1/2 flex flex-col justify-center items-center md:items-start text-center md:text-left opacity-0"
         >
           <h1 className="text-3xl md:text-5xl mt-20 heading tracking-widest font-bold leading-tight">
             Welcome to Photon
