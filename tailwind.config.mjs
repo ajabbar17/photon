@@ -15,7 +15,7 @@ export default {
         'custom-card': '0px 10px 20px rgba(0, 0, 0, 0.3)',
       },
       screens: {
-        '3xl': '2000px', // Custom breakpoint for 2000px+
+        '3xl': '1920px', 
       },
     },
   },
