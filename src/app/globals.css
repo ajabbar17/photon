@@ -165,7 +165,7 @@ background: linear-gradient(340deg, rgb(2, 78, 116) 1%, rgba(0,42,66,1) 46%);
 
 
 
-  @media (max-width: 2600px) {
+  @media (min-width: 2500px) {
     .circle-arrow {
       bottom: 15rem; /* Adjust the value as needed */
     }
