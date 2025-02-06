@@ -19,7 +19,7 @@ const Circle2 = ({ bottom, right }) => {
     return () => window.removeEventListener('resize', checkIfMobile);
   }, []);
 
-  const bottomValue = isMobile ? `${Number(bottom) + 9}%` : `${bottom}%`;
+  const bottomValue = isMobile ? `${Number(bottom) + 6}%` : `${bottom}%`;
 
   return (
     <div

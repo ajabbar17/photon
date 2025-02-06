@@ -87,74 +87,75 @@ const Navbar = () => {
       <nav className={`px-6 py-4 bg-transparent w-full z-50 transition-colors duration-300 ${
         isScrolled ? 'absolute top-0' : 'fixed'
       }`}>
-        <div className="max-w-[1920px] mx-auto flex items-center justify-between md:justify-start">
-          <div ref={logoRef} className="text-2xl font-bold md:w-1/4 opacity-0">
+        <div className="max-w-[1920px] mx-auto flex items-center">
+          {/* Logo - Fixed width */}
+          <div ref={logoRef} className="w-[200px] opacity-0">
             <Link href="/">
               <Image src="/logonav.png" alt="logo" width={139} height={48} />
             </Link>
           </div>
           
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex gap-8 z-50 justify-center w-2/4">
-            {/* Home Link */}
-            <Link 
-              href="/"
-              ref={el => navLinksRef.current[0] = el}
-              className="text-[#0c1b34] z-50 detail opacity-0"
-            >
-              Home
-            </Link>
-
-            {/* Services Dropdown */}
-            <div className="relative">
-              <button
-                onMouseEnter={() => setIsDropdownOpen(true)}
-                onMouseLeave={() => setIsDropdownOpen(false)}
+          {/* Navigation Links - Centered */}
+          <div className="flex-1 flex justify-center">
+            <div className="hidden md:flex items-center gap-8">
+              <Link 
+                href="/"
+                ref={el => navLinksRef.current[0] = el}
                 className="text-[#0c1b34] z-50 detail opacity-0"
-                ref={el => navLinksRef.current[1] = el}
               >
-                Services
-              </button>
-              {isDropdownOpen && (
-                <div
+                Home
+              </Link>
+
+              {/* Services Dropdown */}
+              <div className="relative">
+                <button
                   onMouseEnter={() => setIsDropdownOpen(true)}
                   onMouseLeave={() => setIsDropdownOpen(false)}
-                  className="absolute top-full left-0 w-72 bg-[#d44b22] rounded-lg shadow-lg py-2"
+                  className="text-[#0c1b34] z-50 detail opacity-0"
+                  ref={el => navLinksRef.current[1] = el}
                 >
-                  {serviceLinks.map((link) => (
-                    <Link
-                      key={link.href}
-                      href={link.href}
-                      className="block px-4 py-2 text-sm text-[#0c1b34] hover:text-white detail"
-                    >
-                      {link.text}
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
+                  Services
+                </button>
+                {isDropdownOpen && (
+                  <div
+                    onMouseEnter={() => setIsDropdownOpen(true)}
+                    onMouseLeave={() => setIsDropdownOpen(false)}
+                    className="absolute top-full left-0 w-72 bg-[#0c1b34] rounded-lg shadow-lg py-2"
+                  >
+                    {serviceLinks.map((link) => (
+                      <Link
+                        key={link.href}
+                        href={link.href}
+                        className="block px-4 py-2 text-sm text-[#fff] hover:text-white detail"
+                      >
+                        {link.text}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
 
-            {/* Contact Link */}
-            <Link 
-              href="/contact"
-              ref={el => navLinksRef.current[2] = el}
-              className="text-[#0c1b34] z-50 detail opacity-0"
-            >
-              Contact
-            </Link>
+              {/* Contact Link */}
+              <Link 
+                href="/contact"
+                ref={el => navLinksRef.current[2] = el}
+                className="text-[#0c1b34] z-50 detail opacity-0"
+              >
+                Contact
+              </Link>
+            </div>
           </div>
           
-          {/* Mobile Menu Button */}
-          <button 
-            onClick={toggleSidebar}
-            className="md:hidden text-[#0c1b34]"
-          >
-            <Menu size={24} />
-          </button>
-          
-          <div className="hidden md:block w-1/3" />
+          {/* Right spacing - Fixed width */}
+          <div className="w-[200px] flex justify-end">
+            <button 
+              onClick={toggleSidebar}
+              className="md:hidden text-[#0c1b34]"
+            >
+              <Menu size={24} />
+            </button>
+          </div>
         </div>
-        
       </nav>
 
       {/* Sliding Sidebar */}

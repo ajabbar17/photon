@@ -137,7 +137,7 @@ const Alt4 = ({ active: initialActive = 0 }) => {
         <div className="relative h-full w-full">{generateItems()}</div>
 
         {/* Navigation arrows moved to bottom */}
-        <div className="flex absolute top-[75%] 3xl:top-[63%] justify-center z-50 gap-8 mb-8">
+        <div className="flex absolute top-[75%] btn 3xl:top-[63%] justify-center z-50 gap-8 mb-8">
           <button
             onClick={moveLeft}
             className="rounded-full bg-transparent  transition-all duration-500  hover:text-purple-600 text-white flex items-center justify-center"
@@ -153,7 +153,7 @@ const Alt4 = ({ active: initialActive = 0 }) => {
         </div>
       </div>
 
-      <div className="absolute bottom-[30vh] img1 md:bottom-28 3xl:bottom-64">
+      <div className="absolute bottom-[30vh] img1 xl:bottom-28 3xl:bottom-64">
         <Image
           src="/grid.png"
           alt="background grid"
@@ -164,7 +164,7 @@ const Alt4 = ({ active: initialActive = 0 }) => {
           priority
           />
       </div>
-      <div className="absolute bottom-[25vh] img1  md:bottom-8 3xl:bottom-36">
+      <div className="absolute bottom-[25vh] img1 xl:bottom-8 3xl:bottom-36">
         <Image
           src="/circle.png"
           alt="background circle"

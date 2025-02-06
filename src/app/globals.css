@@ -111,17 +111,29 @@ background: linear-gradient(340deg, rgb(2, 78, 116) 1%, rgba(0,42,66,1) 46%);
     );
 
   }
+
   
-  /* Media query for mobile screens */
-  @media (max-width: 768px) {
+  @media screen and (max-width: 1100px) {
     .footer {
       height: 98%;
-
       clip-path: ellipse(100% 100% at 50% 0%);
     }
   
     .wrapper {
       clip-path: ellipse(100% 100% at 50% 0%);
+    }
+    
+  }
+  /* Media query for mobile screens */
+  @media (max-width: 768px) {
+    .footer {
+      height: 98%;
+
+      clip-path: ellipse(99% 100% at 50% 0%);
+    }
+  
+    .wrapper {
+      clip-path: ellipse(99% 100% at 50% 0%);
     }
 
     .carousel-card {
@@ -153,6 +165,7 @@ background: linear-gradient(340deg, rgb(2, 78, 116) 1%, rgba(0,42,66,1) 46%);
 
 
   }
+  
 
   .footer ul {
     list-style: none;
@@ -177,7 +190,7 @@ background: linear-gradient(340deg, rgb(2, 78, 116) 1%, rgba(0,42,66,1) 46%);
 
 @media (min-width: 1280px) {
   .circle-arrow {
-    bottom: 10rem; /* equivalent to xl:bottom-40 */
+    bottom: 26vh; /* equivalent to xl:bottom-40 */
   }
 }
 
@@ -198,3 +211,20 @@ background: linear-gradient(340deg, rgb(2, 78, 116) 1%, rgba(0,42,66,1) 46%);
 }
 
 
+@media (min-width: 1024px) {
+  .img1 {
+    bottom: 53vh ;
+  }
+  .btn{
+    top: 50vh ;
+  }
+}
+
+@media (min-width: 1050px) {
+  .img1 {
+    bottom: 15vh ;
+  }
+  .btn{
+    top: 80vh ;
+  }
+}
