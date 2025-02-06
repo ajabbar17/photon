@@ -188,12 +188,13 @@ background: linear-gradient(340deg, rgb(2, 78, 116) 1%, rgba(0,42,66,1) 46%);
 }
 @media (min-width: 390px) {
   .img1 {
-    bottom: 34vh !important;
+    bottom: 34vh ;
   }
 }
 @media (min-width: 400px) {
   .img1 {
-    bottom: 40vh !important;
+    bottom: 40vh ;
   }
 }
+
 
