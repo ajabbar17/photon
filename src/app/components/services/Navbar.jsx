@@ -43,14 +43,14 @@ export default function Navbar() {
   return (
     <>
       <nav className="absolute top-0 left-0 w-full flex items-center z-50 px-8 py-6 text-white">
-        <div ref={logoRef} className="w-[150px]">
+        <div ref={logoRef} className="w-[200px]">
           <Link href="/">
             <Image src="/logofooter.png" width={150} height={50} alt="Logo" />
           </Link>
         </div>
 
         <div className="flex-1 flex justify-center">
-          <ul ref={navRef} className="hidden md:flex gap-8 detail font-normal text-lg">
+          <ul ref={navRef} className="hidden md:flex items-center gap-8 detail font-normal text-lg">
             <li>
               <Link href="/">
                 Home
@@ -90,7 +90,7 @@ export default function Navbar() {
           </ul>
         </div>
 
-        <div className="md:w-[150px] flex justify-end">
+        <div className="w-[200px] flex justify-end">
           <button 
             onClick={toggleSidebar}
             className="md:hidden text-white"

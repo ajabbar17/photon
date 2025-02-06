@@ -58,7 +58,7 @@ export default function ContactInfo({
   }, []);
 
   const handleEmailClick = () => {
-    window.location.href = "mailto:info@per.com.pk";
+    window.location.href = "/contact-form";
   };
 
   return (

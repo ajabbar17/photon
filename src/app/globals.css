@@ -222,7 +222,7 @@ background: linear-gradient(340deg, rgb(2, 78, 116) 1%, rgba(0,42,66,1) 46%);
 
 @media (min-width: 1050px) {
   .img1 {
-    bottom: 15vh ;
+    bottom: 12vh ;
   }
   .btn{
     top: 80vh ;

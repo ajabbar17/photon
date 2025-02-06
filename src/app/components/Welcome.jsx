@@ -50,6 +50,10 @@ export default function Welcome() {
         };
     }, []);
 
+    const handleEmailClick = () => {
+        window.location.href = "/contact-form";
+    }
+
     return (
       <section className="bg-[#0d2538] overflow-hidden flex xl:flex-row flex-col justify-between gap-4 xl:gap-0 text-white py-9 md:py-20 px-6 md:px-10 xl:px-16">
         <div 
@@ -66,7 +70,9 @@ export default function Welcome() {
             in your spaces, we provide sustainable and reliable solutions tailored
             to your needs.
           </p>
-          <button className="mt-8 px-3 py-3 w-[187px] h-[47px] bg-[#f25525] text-white text-base font-normal rounded-3xl hover:bg-[#C6370C] transition">
+          <button 
+          onClick={handleEmailClick}
+          className="mt-8 px-3 py-3 w-[187px] h-[47px] bg-[#f25525] text-white text-base font-normal rounded-3xl hover:bg-[#C6370C] transition">
             Get Started
           </button>
         </div>

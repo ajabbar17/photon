@@ -11,8 +11,8 @@ const Footer = () => {
   };
   return (
     <div className="bg-[#0d2538] relative h-screen  z-0">
-      <div className="wrapper h-full md:h-[80%] z-50">
-        <div className="footer bg-[#0d2538] grid  grid-cols-1 md:grid-cols-2 justify-between gap-10 px-8 md:px-12 py-6 md:py-12 z-20">
+      <div className="wrapper h-[82%] md:h-[77%]  xl:h-[80%]  z-50">
+        <div className="footer bg-[#0d2538] grid  grid-cols-1 md:grid-cols-2 justify-between md:gap-10 px-8 md:px-12 py-6 md:py-12 z-20">
           {/* Column 1: Logo */}
           <div className="flex flex-col text-white items-start max-w-[500px]">
             <div className="mb-4">
@@ -39,10 +39,10 @@ const Footer = () => {
           </div>
 
           {/* Column 2: Email Subscription and Social Media Icons */}
-          <div className="text-white w-full flex flex-col items-end ">
+          <div className="text-white w-full flex flex-col items-start md:items-center ">
             {/* Email Subscription */}
-            <div className="md:mt-24 w-full flex justify-start md:justify-end">
-              <div className="flex">
+            <div className=" w-full flex ">
+              {/* <div className="flex">
                 <input
                   type="email"
                   placeholder="ENTER YOUR GMAIL"
@@ -51,11 +51,13 @@ const Footer = () => {
                 <button className="bg-orange-500 uppercase font-bold w-[160px] -ml-7 border-2 text-white px-9 md:px-[47px] py-2 rounded-[99px] hover:bg-orange-600">
                   Join Us
                 </button>
-              </div>
+              </div> */}
             </div>
+            <h3 className="text-lg  heading font-normal mb-4">SOCIAL LINKS</h3>
 
             {/* Social Media Icons */}
-            <div className="flex mt-10 mb-20 md:mr-72 space-x-4">
+
+            <div className="flex  mb-20  space-x-4">
               <Link href="https://www.instagram.com/photonengineeringrealm?igsh=ZjZ1NWVtd3Ywd2U2" target="_blank" className="text-white text-xl hover:text-gray-300">
                 <i className="fab fa-instagram">
                   <Image src="/ig.png" alt="Instagram" width={32} height={32} />
@@ -81,8 +83,8 @@ const Footer = () => {
       <Circle bottom={10} right={30} />
       <Circle bottom={15} right={20} />
       <Circle bottom={20} right={15} />
-      <Circle bottom={25} right={10} />
-      <Circle bottom={28} right={0} />
+      <Circle bottom={21} right={10} />
+      <Circle bottom={21} right={0} />
       <Circle2 bottom={17} right={30} />
         <Circle2 bottom={20} right={35} />
     </div>

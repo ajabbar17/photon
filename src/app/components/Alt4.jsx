@@ -61,11 +61,11 @@ const ServiceCard = ({ title, description, position, src }) => {
       case -2:
         return "left-[2%] 3xl:left-[8%] top-[7%] h-[380px] w-[320px] md:w-[400px] z-0 opacity-70";
       case -1:
-        return "left-[30%] top-[7%]  h-[380px] w-[320px] md:w-[400px] z-10 opacity-95";
+        return "left-[30%] top-[7%]  h-[380px] w-[320px] md:w-[400px] z-10 opacity-85";
       case 0:
         return "left-[50%] top-[1%] h-[470px] w-[320px] md:w-[400px] z-20 opacity-100"; // Increased dimensions for active card
       case 1:
-        return "left-[70%] top-[7%] h-[380px] w-[320px] md:w-[400px] z-10 opacity-95";
+        return "left-[70%] top-[7%] h-[380px] w-[320px] md:w-[400px] z-10 opacity-85";
       case 2:
         return "left-[98%] 3xl:left-[92%] top-[7%] h-[380px] w-[320px] md:w-[400px] z-0 opacity-70";
       default:
