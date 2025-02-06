@@ -153,7 +153,7 @@ const Alt4 = ({ active: initialActive = 0 }) => {
         </div>
       </div>
 
-      <div className="absolute bottom-20 md:bottom-28 3xl:bottom-64">
+      <div className="absolute bottom-[30vh] img1 md:bottom-28 3xl:bottom-64">
         <Image
           src="/grid.png"
           alt="background grid"
@@ -164,7 +164,7 @@ const Alt4 = ({ active: initialActive = 0 }) => {
           priority
           />
       </div>
-      <div className="absolute bottom-16  md:bottom-8 3xl:bottom-36">
+      <div className="absolute bottom-[25vh] img1  md:bottom-8 3xl:bottom-36">
         <Image
           src="/circle.png"
           alt="background circle"
