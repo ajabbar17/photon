@@ -5,11 +5,15 @@ import React from 'react'
 import ContactInfo from '../components/contact/ContactInfo'
 import Footer from '../components/footer/Footer'
 
+export const metadata = {
+    title: "Contact",
+    description: ""
+};
+
 const page = () => {
     const span = "Email us at: ";
     const spandetail =  "info@per.com.pk or call 03000320737";
   
-   
   return (
     <div>
         <Navbar />

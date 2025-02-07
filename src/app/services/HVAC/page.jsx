@@ -5,6 +5,12 @@ import ServiceCards from "@/app/components/services/ServiceCards";
 import ServiceHero from "@/app/components/services/ServiceHero";
 import React from "react";
 
+
+export const metadata = {
+  title: "Heating, Ventilation & Air Conditioning",
+  description: ""
+};
+
 const page = () => {
   const servicesData = [
     {

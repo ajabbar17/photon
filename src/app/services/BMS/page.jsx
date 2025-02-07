@@ -5,6 +5,11 @@ import ServiceCards from '@/app/components/services/ServiceCards'
 import ServiceHero from '@/app/components/services/ServiceHero'
 import React from 'react'
 
+export const metadata = {
+    title: "Building Management System (BMS)",
+    description: ""
+};  
+
 const page = () => {
     const servicesData = [
         {

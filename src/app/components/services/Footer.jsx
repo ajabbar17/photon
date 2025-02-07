@@ -7,7 +7,7 @@ import Circle2 from "../footer/Circle2";
 
 const Footer = () => {
   const handleEmailClick = () => {
-    window.location.href = "mailto:info@per.com.pk";
+    window.location.href = "/contact-form";
   };
   return (
     <div className="bg-[#0d2538] relative h-screen  z-0">

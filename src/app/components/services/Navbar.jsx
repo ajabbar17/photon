@@ -74,7 +74,7 @@ export default function Navbar() {
                     <Link
                       key={link.href}
                       href={link.href}
-                      className="block px-4 py-2 text-sm text-gray-300 hover:text-white detail"
+                      className="block px-4 py-2 text-sm nav-link text-white detail"
                     >
                       {link.text}
                     </Link>
@@ -127,7 +127,7 @@ export default function Navbar() {
                   <Link 
                     href={link.href}
                     onClick={toggleSidebar}
-                    className="text-sm detail"
+                    className="text-sm nav-link detail"
                   >
                     {link.text}
                   </Link>
