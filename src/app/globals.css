@@ -129,11 +129,11 @@ background: linear-gradient(340deg, rgb(2, 78, 116) 1%, rgba(0,42,66,1) 46%);
     .footer {
       height: 98%;
 
-      clip-path: ellipse(99% 100% at 50% 0%);
+      clip-path: ellipse(100% 100% at 50% 0%);
     }
   
     .wrapper {
-      clip-path: ellipse(99% 100% at 50% 0%);
+      clip-path: ellipse(100% 100% at 50% 0%);
     }
 
     .carousel-card {
