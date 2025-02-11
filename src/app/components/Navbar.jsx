@@ -91,7 +91,7 @@ const Navbar = () => {
           {/* Logo - Fixed width */}
           <div ref={logoRef} className="w-[200px] opacity-0">
             <Link href="/">
-              <Image src="/logonav.png" alt="logo" width={139} height={48} />
+              <Image src="/Group 143.svg" alt="logo" width={139} height={48} />
             </Link>
           </div>
           

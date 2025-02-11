@@ -65,7 +65,10 @@ export default function ServiceHero({ title, span, title2, imageUrl }) {
   return (
     <section
       className="relative w-full h-screen flex items-center justify-center bg-cover bg-center"
-      style={{ backgroundImage: `url(${imageUrl})` }}
+      style={{ 
+        backgroundImage: `url(${imageUrl})`,
+        priority: true 
+      }}
     >
       <div className="absolute inset-0"></div>
 

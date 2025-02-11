@@ -17,7 +17,7 @@ const Footer = () => {
           <div className="flex flex-col text-white items-start max-w-[500px]">
             <div className="mb-4">
               <Image
-                src="/logofooter.png" // Replace with the actual logo URL
+                src="/Group 142.svg" // Replace with the actual logo URL
                 alt="Logo"
                 className="w-32"
                 width={128}

@@ -13,9 +13,9 @@ const Footer = () => {
         <div className="flex flex-col items-start">
           <div className="mb-4">
             <Image
-              src="/logofooter.png" // Replace with the actual logo URL
+              src="/Group 142.svg" // Replace with the actual logo URL
               alt="Logo"
-              className="w-32"
+              className="w-36 "
               width={128}
               height={128}
             />
