@@ -75,7 +75,7 @@ export default function Info({
         <h2 className="text-3xl md:text-5xl leading-10 source font-bold mb-4">
           {title}
         </h2>
-        <div className="pr-20">
+        <div className="xl:pr-20">
           <p className="text-xl detail font-light">{description}</p>
           { title2 === undefined ? null :
           <h1 className="text-xl source font-light">
