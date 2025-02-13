@@ -11,13 +11,13 @@ const services = [
     src: "/services/HVAC",
   },
   {
-    title: "FIRE SAFETY SYSTEMS",
+    title: "FIRE Detection, Alarm & Protection Systems",
     description:
       "Safety is at the core of our operations. PER provides comprehensive fire protection solutions to safeguard your assets and personnel.",
     src: "/services/fire",
   },
   {
-    title: "ELEVATORS AND ESCALATORS",
+    title: "ELEVATORS, ESCALATORS & MOVING WALKWAYS",
     description:
       "Whether for commercial or residential projects, we ensure reliable transportation and accessibility solutions.",
     src: "/services/elevators",
@@ -35,13 +35,13 @@ const services = [
     src: "/services/BMS",
   },
   {
-    title: "Drainage & Sewerage Solutions",
+    title: "Plumbing: Water Supply and Drainage Solutions",
     description:
       "Drainage and sewerage solutions for residential, commercial, and industrial projects.",
     src: "/services/drainage",
   },
   {
-    title: "Wind Powered Energy Solutions",
+    title: "Wind Energy Solutions",
     description: "Harness the power of wind with our wind energy solutions.",
     src: "/services/wind",
   },
