@@ -60,7 +60,7 @@ export default function ServiceCards({ title, services }) {
         {title}
       </h2>
 
-      <div className="flex flex-col md:flex-row justify-center gap-6">
+      <div className="flex flex-col flex-wrap md:flex-row xl:ps-10 gap-6">
         {services.map((service, index) => (
           <div
             key={index}

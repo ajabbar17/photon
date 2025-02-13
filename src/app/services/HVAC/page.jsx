@@ -22,6 +22,14 @@ const page = () => {
       description:
         "Prompt repair services to minimize downtime and restore comfort.",
     },
+    {
+      heading: "Installation:",
+      description: "Professional installation of energy-efficient HVAC systems.",
+    },
+    {
+      heading: "Supply:",
+      description: " We provide top-tier ventilation, and air conditioning units from trusted manufacturers, ",
+    }
   ];
   return (
     <div>

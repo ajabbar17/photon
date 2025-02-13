@@ -81,7 +81,7 @@ export default function Welcome() {
           className="opacity-0"
         >
           <Image  
-            src="/welcome.png"
+            src="/welcome2.png"
             width={494}
             height={467}
             alt="Welcome to Photon Engineering Realm" 
