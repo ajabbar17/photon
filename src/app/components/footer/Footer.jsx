@@ -27,14 +27,14 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-normal heading mb-2 md:mb-4">SERVICES</h3>
             <ul className="space-y-2 text-xs md:text-sm detail text-gray-400">
-              <li><Link href="/services/solarpowered" className="hover:text-white">Solar Powered System Solutions</Link></li>
-              <li><Link href="/services/HVAC" className="hover:text-white">HVAC Services</Link></li>
+              <li><Link href="/services/BMS" className="hover:text-white">BMS</Link></li>
               <li><Link href="/services/elevators" className="hover:text-white">Elevators, Escalators & Moving Walkways</Link></li>
               <li><Link href="/services/fire" className="hover:text-white">Fire Detection, Alarm & Protection System</Link></li>
-              <li><Link href="/services/wind" className="hover:text-white">Wind Energy Solutions</Link></li>
-              <li><Link href="/services/BMS" className="hover:text-white">BMS</Link></li>
+              <li><Link href="/services/HVAC" className="hover:text-white">Heating Ventilation and Air Conditioning Solutions</Link></li>
               <li><Link href="/services/lightning" className="hover:text-white">Lightning Protection System</Link></li>
               <li><Link href="/services/drainage" className="hover:text-white">Plumbing: Water Supply & Drainage Solutions</Link></li>
+              <li><Link href="/services/solarpowered" className="hover:text-white">Solar Powered System Solutions</Link></li>
+              <li><Link href="/services/wind" className="hover:text-white">Wind Energy Solutions</Link></li>
             </ul>
           </div>
           <div>

@@ -82,9 +82,11 @@ export default function Info({
             {title2}
             <br />
             
-            <p className="font-medium detail">{span[0]}<span className="font-light">{spandetail[0]}</span></p>
-            <p className="font-medium detail">{span[1]}<span className="font-light">{spandetail[1]}</span></p>
-            <p className="font-medium detail">{span[2]}<span className="font-light">{spandetail[2]}</span></p>
+            <ul className="list-disc pl-5">
+              {span.map((item, index) => (
+                <li key={index} className="font-medium detail">{item}</li>
+              ))}
+            </ul>
           </h1>
 }
         </div>

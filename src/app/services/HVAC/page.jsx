@@ -14,23 +14,33 @@ export const metadata = {
 const page = () => {
   const servicesData = [
     {
-      heading: "Maintenance:",
-      description: "Regular maintenance services to ensure peak performance.",
+      heading: "Engineering:",
+      description:
+        "We provide detailed design, system integration, and technical planning to meet project requirements.",
     },
     {
-      heading: "Repair:",
+      heading: "Procurement:",
       description:
-        "Prompt repair services to minimize downtime and restore comfort.",
+        "We focus on sourcing high-quality materials and equipment at optimal costs while ensuring compliance with industry standards.",
     },
     {
       heading: "Installation:",
-      description: "Professional installation of energy-efficient HVAC systems.",
+      description:
+        "We cover on-site execution, testing, commissioning and after sales support of MEP systems to ensure efficient and reliable performance enhancing project efficiency and reducing risks.",
     },
-    {
-      heading: "Supply:",
-      description: " We provide top-tier ventilation, and air conditioning units from trusted manufacturers, ",
-    }
   ];
+
+const span = [ "Chillers (Screw, Centrifugal, Absorption)", 
+  "Hot Water Generators & Boilers (Fire/Wet Tube Wet Back Direct Fired Dual Fuel)",
+  "Cooling Towers",
+  "Roof Top Packaged Air Conditioners",
+  "Variable Refrigerant Flow Air Conditioners (VRF)",
+  "Air Handling Units",
+  "Fan Coil Units",
+  "Ducts, Hangers, Supports, Clamps & Accessories",
+  "Pipes, Hangers, Supports, Clamps & Accessories"
+];
+
   return (
     <div>
       <Navbar />
@@ -43,7 +53,9 @@ const page = () => {
       <Info
         imageUrl="/hvac2.png" // Replace with actual image path
         title="Comfort and Efficiency with Our HVAC Solutions"
-        description="Our Heating, Ventilation, and Air Conditioning (HVAC) services are designed to provide optimal  comfort in your residential or commercial spaces. We understand the importance of a  well-functioning HVAC system for maintaining a healthy environment."
+        title2="Our Services"
+        span={span}
+        description="A Heating, Ventilation, and Air Conditioning (HVAC) system regulates indoor temperature, humidity, and air quality, ensuring comfort and health in residential, commercial, and industrial spaces. Its importance lies in maintaining optimal living and working conditions, improving air quality, and enhancing energy efficiency while reducing environmental impact."
       />
       <ServiceCards
         title="Our HVAC Services Include:"

@@ -13,22 +13,33 @@ export const metadata = {
 
 const page = () => {
     const servicesData = [
-        {
-          heading: "Passenger Lifts:",
-          description:
-            "Designed for comfort and efficiency inhigh-traffic areas.",
-        },
-        {
-          heading: "Cargo & Service Lifts:",
-          description:
-            "Robust solutions for transporting goods.",
-        },
-        {
-          heading: "Escalators and Moving Walkways:",
-          description:
-            "Enhance accessibility and flow in commercial spaces.",
-        },
+      {
+        heading: "Engineering:",
+        description:
+          "We provide detailed design, system integration, and technical planning to meet project requirements.",
+      },
+      {
+        heading: "Procurement:",
+        description:
+          "We focus on sourcing high-quality materials and equipment at optimal costs while ensuring compliance with industry standards.",
+      },
+      {
+        heading: "Installation:",
+        description:
+          "We cover on-site execution, testing, commissioning and after sales support of MEP systems to ensure efficient and reliable performance enhancing project efficiency and reducing risks.",
+      },
       ];
+      const span = [
+        "Passenger Lifts",
+        "Patient Bed Lifts",
+        "Cargo & Service Lifts",
+        "Dumb Waiters",
+        "Escalators",
+        "Travellators",
+        "Moving Walkways",
+        "Parking Management",
+        "Platform Screen Doors & Gates"
+      ]
   return (
     <div>
         <Navbar />
@@ -36,7 +47,9 @@ const page = () => {
         <Info
         imageUrl="/elevators2.png" // Replace with actual image path
         title="Enhance Your Space with Our Transportation Solutions"
-        description="At Photon Engineering Realm, we provide a comprehensive range of Elevators, Escalators, Travelators & Moving Walkways solutions tailored to your needs. Our expertise spans various applications, ensuring safe and  efficient transportation for passengers and goods."
+        title2="Our Services"
+        span={span}
+        description="Elevators, escalators, travelators, and moving walkways are automated systems designed to transport people vertically or horizontally in buildings and public spaces. Their importance lies in improving accessibility, efficiency, and convenience, especially in high-traffic areas, while reducing physical strain for users."
       />
         <ServiceCards title="Our Offerings:" services={servicesData} />
         <Footer />

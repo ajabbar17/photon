@@ -14,26 +14,32 @@ export const metadata = {
 const page = () => {
   const servicesData = [
     {
-      heading: "End-to-End Solutions",
+      heading: "Engineering:",
       description:
-        "From design to installation and maintenance.",
+        "We provide detailed design, system integration, and technical planning to meet project requirements.",
     },
     {
-      heading: "High-Quality Materials",
+      heading: "Procurement:",
       description:
-        "Reliable, long-lasting plumbing components.",
+        "We focus on sourcing high-quality materials and equipment at optimal costs while ensuring compliance with industry standards.",
     },
     {
-      heading: "Sustainable Practices",
+      heading: "Installation:",
       description:
-        "Eco-friendly water and waste management.",
+        "We cover on-site execution, testing, commissioning and after sales support of MEP systems to ensure efficient and reliable performance enhancing project efficiency and reducing risks.",
     },
   ];
-  const span = ["Water Supply Systems - ", "Drainage & Sewerage - ", "Premimum Fixtures - "];
-  const spandetail = [
-    "Cold & hot water piping (PPRC), underground HDPE pipes, solar geysers, and electrical water heaters.",
-    "uPVC drainage pipes, sewerage treatment plants, and waste management systems.",
-    "World-class plumbing fittings for durability and efficiency."]
+const span = [
+  "Cold & Hot Water Pipes (PPRC)",
+  "Water Drainage (uPVC)",
+  "Underground Pipes for Water Supply & Sewerage (HDPE)",
+  "Hot Water Solar Geysers",
+  "Hot Water Electrical Generators",
+  "Sewerage Treatment Plants & Chemicals",
+  "Waste Management System",
+  "World Class Plumbing Fittings & Fixtures"
+];
+
 
   return (
     <div>
@@ -49,11 +55,10 @@ const page = () => {
         description="At Photon Engineering Realm (PER), we provide comprehensive plumbing, water supply, and drainage solutions for commercial, industrial, and residential projects. Our expert team ensures efficient water distribution and waste management with top-quality materials and advanced technology."
         title2="Our Services"
         span={span}
-        spandetail={spandetail}
 
       />
       <ServiceCards
-        title="Plumbing, Water Supply & Drainage Solutions?"
+        title="Plumbing, Water Supply & Drainage Services Includes:"
         services={servicesData}
       />
       <Footer />

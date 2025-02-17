@@ -13,22 +13,35 @@ export const metadata = {
 
 const page = () => {
     const servicesData = [
-        {
-          heading: "Fire Detection Systems:",
-          description:
-            "Advanced systems to detect smoke and fire quickly.",
-        },
-        {
-          heading: "Alarm Systems:",
-          description:
-            "Reliable alarm systems to alert occupants in emergencies.",
-        },
-        {
-          heading: "Fire Protection Solutions:",
-          description:
-            "Tailored solutions to meet regulatory standards and enhance safety.",
-        },
+      {
+        heading: "Engineering:",
+        description:
+          "We provide detailed design, system integration, and technical planning to meet project requirements.",
+      },
+      {
+        heading: "Procurement:",
+        description:
+          "We focus on sourcing high-quality materials and equipment at optimal costs while ensuring compliance with industry standards.",
+      },
+      {
+        heading: "Installation:",
+        description:
+          "We cover on-site execution, testing, commissioning and after sales support of MEP systems to ensure efficient and reliable performance enhancing project efficiency and reducing risks.",
+      },
       ];
+
+      const span = [
+        "Fire Detection & Alarm",
+        "Fire Pumps (Diesel, Jockey & Electric) Sprinklers",
+        "Mobile Foam Units",
+        "Fire Hose Reels & Cabinets Fire Hydrants",
+        "Fire Extinguishers",
+        "Pipes, Hangers, Supports, Clamps & Accessories",
+        "Valves & Specialties",
+        "Controllers",
+        "Fire Stop Arrangement etc."
+      ];
+
   return (
     <div>
         <Navbar />
@@ -36,9 +49,11 @@ const page = () => {
         <Info
         imageUrl="/fire2.png" // Replace with actual image path
         title="Protect What Matters Most with Our Fire Safety Solutions"
-        description="Fire safety is paramount in any building. Our comprehensive fire detection, alarm, and  protection services ensure that your property and its occupants are safeguarded against fire  hazards."
+        title2="Our Services"
+        span={span}
+        description="A Fire Detection, Alarm, and Protection System detects smoke or fire, alerts occupants, and activates safety measures to prevent or minimize damage. Its importance lies in protecting lives, property, and minimizing fire-related risks by providing early warning and efficient emergency response."
       />
-        <ServiceCards title="Our Fire Safety Services include Supply, Installation, Testing & Commissioning for following domains:" services={servicesData} />
+        <ServiceCards title="Our Fire Safety Services includes:" services={servicesData} />
         <Footer />
     </div>
   )

@@ -13,22 +13,32 @@ export const metadata = {
 
 const page = () => {
     const servicesData = [
-        {
-          heading: "Proactive Strike Prevention:",
-          description:
-            `Advanced ESE technology enhances the system’s  response to lightning threats.`,
-        },
-        {
-          heading: "Wide Coverage Area:",
-          description:
-            "Our solutions provide comprehensive protection for large  and complex structures.",
-        },
-        {
-          heading: "Regulatory Compliance:",
-          description:
-            "Designed to meet international safety standards for  maximum reliability.",
-        },
+      {
+        heading: "Engineering:",
+        description:
+          "We provide detailed design, system integration, and technical planning to meet project requirements.",
+      },
+      {
+        heading: "Procurement:",
+        description:
+          "We focus on sourcing high-quality materials and equipment at optimal costs while ensuring compliance with industry standards.",
+      },
+      {
+        heading: "Installation:",
+        description:
+          "We cover on-site execution, testing, commissioning and after sales support of MEP systems to ensure efficient and reliable performance enhancing project efficiency and reducing risks.",
+      },
       ];
+
+const span = [
+  "Air Termination Lightning Protection",
+  "Meshed Conductors Lightning Protection",
+  "Catenary Wire Lightning Conductor",
+  "Solid Earthed Neutral",
+  "Unearthed Neutral",
+  "Resistance Earthed Neutral",
+  "Reactance Earthed Neutral"
+]
   return (
     <div>
         <Navbar />
@@ -36,7 +46,9 @@ const page = () => {
         <Info
         imageUrl="/lightning2.png" // Replace with actual image path
         title="Advanced Protection Against Lightning Strikes"
-        description="Protect your property and infrastructure with our Early Streamer Emission (ESE)-based  Lightning Protection Systems. Designed to offer superior coverage, our systems ensure safety  by effectively intercepting and directing lightning strikes away from critical structures."
+        title2="Our Services"
+        span={span}
+        description="Earthing and lightning protection systems are one of the many systems that keep us and the equipment safe from any electrical mishaps. We at PER are able to design, source and install the lightning protection systems including;"
       />
         <ServiceCards title="Key Features of Our Lightning Protection Systems:" services={servicesData} />
         <Footer />

@@ -15,14 +15,14 @@ const Navbar = () => {
   const timeline = useRef(null);
 
   const serviceLinks = [
-    { href: "/services/solarpowered", text: "Solar Powered System Solutions" },
-    { href: "/services/HVAC", text: "HVAC Services" },
+    { href: "/services/BMS", text: "BMS" },
     { href: "/services/elevators", text: "Elevators, Escalators & Moving Walkways" },
     { href: "/services/fire", text: "Fire Detection, Alarm & Protection Systems" },
-    { href: "/services/wind", text: "Wind Energy Solutions" },
-    { href: "/services/BMS", text: "BMS" },
+    { href: "/services/HVAC", text: "Heating Ventilation and Air Conditioning Solutions" },
     { href: "/services/lightning", text: "Lightning Protection System" },
     { href: "/services/drainage", text: "Plumbing, Water Supply & Drainage Solutions" },
+    { href: "/services/solarpowered", text: "Solar Powered System Solutions" },
+    { href: "/services/wind", text: "Wind Energy Solutions" },
   ];
 
   const navItems = ['Home', 'Contact'];

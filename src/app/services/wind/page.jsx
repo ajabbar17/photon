@@ -13,21 +13,21 @@ export const metadata = {
 
 const page = () => {
     const servicesData = [
-        {
-          heading: "Customized Solutions:",
-          description:
-            "We design wind power systems tailored to your specific  energy requirements.",
-        },
-        {
-          heading: "Advanced Technology:",
-          description:
-            "Our turbines are equipped with the latest innovations for  maximum efficiency.",
-        },
-        {
-          heading: "Reliable Performance:",
-          description:
-            "Built for durability, our systems ensure consistent energy  output year-round.",
-        },
+      {
+        heading: "Engineering:",
+        description:
+          "We provide detailed design, system integration, and technical planning to meet project requirements.",
+      },
+      {
+        heading: "Procurement:",
+        description:
+          "We focus on sourcing high-quality materials and equipment at optimal costs while ensuring compliance with industry standards.",
+      },
+      {
+        heading: "Installation:",
+        description:
+          "We cover on-site execution, testing, commissioning and after sales support of MEP systems to ensure efficient and reliable performance enhancing project efficiency and reducing risks.",
+      },
       ];
   return (
     <div>

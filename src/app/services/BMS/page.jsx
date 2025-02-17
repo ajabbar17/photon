@@ -13,19 +13,19 @@ export const metadata = {
 const page = () => {
     const servicesData = [
         {
-          heading: "Automation & Control:",
+          heading: "Engineering:",
           description:
-            "Monitor and manage lighting, HVAC, and security systems from a single platform.",
+            "We provide detailed design, system integration, and technical planning to meet project requirements.",
         },
         {
-          heading: "Energy Efficiency:",
+          heading: "Procurement:",
           description:
-            "Reduce energy consumption with smart scheduling and real-time monitoring.",
+            "We focus on sourcing high-quality materials and equipment at optimal costs while ensuring compliance with industry standards.",
         },
         {
-          heading: "Seamless Integration:",
+          heading: "Installation:",
           description:
-            "Our solutions integrate with existing infrastructure for enhanced performance.",
+            "We cover on-site execution, testing, commissioning and after sales support of MEP systems to ensure efficient and reliable performance enhancing project efficiency and reducing risks.",
         },
       ];
   return (
@@ -37,7 +37,7 @@ const page = () => {
         title="Smart Solutions for Smarter Buildings"
         description="A well-designed Building Management System (BMS) optimizes the operation of various  building functions, ensuring efficiency, safety, and cost savings. At Photon Engineering Realm,  we provide intelligent BMS solutions that offer centralized control over essential building  operations."
       />
-        <ServiceCards title="Our BMS Services include Supply, Installation, Testing & Commissioning for following domains:" services={servicesData} />
+        <ServiceCards title="Our BMS Services include:" services={servicesData} />
         <Footer />
     </div>
   )
