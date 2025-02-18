@@ -51,7 +51,7 @@ const span = [ "Chillers (Screw, Centrifugal, Absorption)",
         imageUrl="/hvac.png"
       />
       <Info
-        imageUrl="/hvac2.png" // Replace with actual image path
+        imageUrl="/hvac3.svg" // Replace with actual image path
         title="Comfort and Efficiency with Our HVAC Solutions"
         title2="Our Services"
         span={span}

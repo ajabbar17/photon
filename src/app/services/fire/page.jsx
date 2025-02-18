@@ -47,7 +47,7 @@ const page = () => {
         <Navbar />
         <ServiceHero title="Fire Detection, Alarm & Protection" title2="System Solutions" imageUrl="/fire.png" />
         <Info
-        imageUrl="/fire2.png" // Replace with actual image path
+        imageUrl="/fire3.svg" // Replace with actual image path
         title="Protect What Matters Most with Our Fire Safety Solutions"
         title2="Our Services"
         span={span}
