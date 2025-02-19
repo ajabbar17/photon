@@ -5,10 +5,14 @@ import ServiceCards from "@/app/components/services/ServiceCards";
 import ServiceHero from "@/app/components/services/ServiceHero";
 import React from "react";
 
-
 export const metadata = {
   title: "Drainage & Sewerage Solutions",
-  description: ""
+  description: "",
+  keywords: [],
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 const page = () => {
@@ -29,17 +33,16 @@ const page = () => {
         "We cover on-site execution, testing, commissioning and after sales support of MEP systems to ensure efficient and reliable performance enhancing project efficiency and reducing risks.",
     },
   ];
-const span = [
-  "Cold & Hot Water Pipes (PPRC)",
-  "Water Drainage (uPVC)",
-  "Underground Pipes for Water Supply & Sewerage (HDPE)",
-  "Hot Water Solar Geysers",
-  "Hot Water Electrical Generators",
-  "Sewerage Treatment Plants & Chemicals",
-  "Waste Management System",
-  "World Class Plumbing Fittings & Fixtures"
-];
-
+  const span = [
+    "Cold & Hot Water Pipes (PPRC)",
+    "Water Drainage (uPVC)",
+    "Underground Pipes for Water Supply & Sewerage (HDPE)",
+    "Hot Water Solar Geysers",
+    "Hot Water Electrical Generators",
+    "Sewerage Treatment Plants & Chemicals",
+    "Waste Management System",
+    "World Class Plumbing Fittings & Fixtures",
+  ];
 
   return (
     <div>
@@ -55,7 +58,6 @@ const span = [
         description="At Photon Engineering Realm (PER), we provide comprehensive plumbing, water supply, and drainage solutions for commercial, industrial, and residential projects. Our expert team ensures efficient water distribution and waste management with top-quality materials and advanced technology."
         title2="Our Services"
         span={span}
-
       />
       <ServiceCards
         title="Plumbing, Water Supply & Drainage Services Includes:"

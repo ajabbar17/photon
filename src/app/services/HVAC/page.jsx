@@ -5,10 +5,14 @@ import ServiceCards from "@/app/components/services/ServiceCards";
 import ServiceHero from "@/app/components/services/ServiceHero";
 import React from "react";
 
-
 export const metadata = {
   title: "Heating, Ventilation & Air Conditioning",
-  description: ""
+  description: "",
+  keywords: [],
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 const page = () => {
@@ -30,16 +34,17 @@ const page = () => {
     },
   ];
 
-const span = [ "Chillers (Screw, Centrifugal, Absorption)", 
-  "Hot Water Generators & Boilers (Fire/Wet Tube Wet Back Direct Fired Dual Fuel)",
-  "Cooling Towers",
-  "Roof Top Packaged Air Conditioners",
-  "Variable Refrigerant Flow Air Conditioners (VRF)",
-  "Air Handling Units",
-  "Fan Coil Units",
-  "Ducts, Hangers, Supports, Clamps & Accessories",
-  "Pipes, Hangers, Supports, Clamps & Accessories"
-];
+  const span = [
+    "Chillers (Screw, Centrifugal, Absorption)",
+    "Hot Water Generators & Boilers (Fire/Wet Tube Wet Back Direct Fired Dual Fuel)",
+    "Cooling Towers",
+    "Roof Top Packaged Air Conditioners",
+    "Variable Refrigerant Flow Air Conditioners (VRF)",
+    "Air Handling Units",
+    "Fan Coil Units",
+    "Ducts, Hangers, Supports, Clamps & Accessories",
+    "Pipes, Hangers, Supports, Clamps & Accessories",
+  ];
 
   return (
     <div>

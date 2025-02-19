@@ -8,6 +8,11 @@ import React from "react";
 export const metadata = {
   title: "Solar Powered System Solutions",
   description: "",
+  keywords: [],
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 const page = () => {
