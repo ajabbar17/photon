@@ -53,32 +53,32 @@ const ContactForm = () => {
 
   return (
     <div className="min-h-screen bg-[#0d2538] py-4 sm:py-6 md:py-8 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mt-20 md:mt-10 xl:mt-0 mx-auto">
+      <div className="max-w-7xl 3xl:max-w-screen mt-20 md:mt-10 xl:mt-0 mx-auto">
         <div className="flex flex-col items-center justify-between lg:flex-row gap-6">
           <div className="w-full lg:w-1/2 pt-4 sm:pt-6 text-center lg:text-left">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl heading font-bold text-white mb-2 sm:mb-3">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl 3xl:text-7xl heading font-bold text-white mb-2 sm:mb-3">
               Let&apos;s Talk About Everything!
             </h2>
-            <p className="text-gray-300 detail text-base sm:text-lg md:text-xl mb-4 sm:mb-6 px-4 sm:px-0">
+            <p className="text-gray-300 detail text-base sm:text-lg md:text-xl 3xl:text-2xl mb-4 sm:mb-6 px-4 sm:px-0">
               Hello there! If you&apos;d like to ask us something, you can get
               in touch with us here. We&apos;d love to address any and all
               concerns you may have.
             </p>
 
             <div className="space-y-2 tracking-wider text-gray-300">
-              <h3 className="text-xl sm:text-2xl font-semibold heading text-white">
+              <h3 className="text-xl sm:text-2xl 3xl:text-3xl font-semibold heading text-white">
                 Head Office
               </h3>
               <div className="flex flex-col items-center lg:items-start gap-2">
                 <p className="flex items-center detail">
                   <MapPin className="mr-2 flex-shrink-0" />
-                  <span className="text-sm sm:text-base">
+                  <span className="text-sm sm:text-base 3xl:text-xl">
                     47-A, Agrics Town, Raiwind Road, Lahore
                   </span>
                 </p>
                 <p className="flex items-center detail">
                   <Phone size={24} className="text-white mr-2 flex-shrink-0" />
-                  <span className="text-sm sm:text-base">03000320737</span>
+                  <span className="text-sm sm:text-base 3xl:text-xl">03000320737</span>
                 </p>
               </div>
             </div>

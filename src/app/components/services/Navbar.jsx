@@ -52,7 +52,7 @@ export default function Navbar() {
         <div className="flex-1 flex justify-center">
           <ul ref={navRef} className="hidden md:flex items-center gap-8 detail font-normal text-lg">
             <li>
-              <Link href="/">
+              <Link className="nav-link" href="/">
                 Home
               </Link>
             </li>
@@ -60,7 +60,7 @@ export default function Navbar() {
               <button
                 onMouseEnter={() => setIsDropdownOpen(true)}
                 onMouseLeave={() => setIsDropdownOpen(false)}
-                className="text-white"
+                className="text-white nav-link"
               >
                 Services
               </button>
@@ -83,7 +83,7 @@ export default function Navbar() {
               )}
             </li>
             <li>
-              <Link href="/contact">
+              <Link className="nav-link" href="/contact">
                 Contact
               </Link>
             </li>

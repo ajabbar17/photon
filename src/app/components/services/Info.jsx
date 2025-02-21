@@ -59,7 +59,7 @@ export default function Info({
   }, []);
 
   return (
-    <section className="bg-[#0d2538] text-white py-16 px-6 md:px-10 flex flex-col md:flex-row items-center gap-10 overflow-hidden">
+    <section className="bg-[#0d2538] text-white py-16 px-6 md:px-10 flex flex-col md:flex-row xl:justify-center items-center gap-10 overflow-hidden">
       {/* Image Section */}
       <div ref={imageRef} className="opacity-0">
         <Image
@@ -84,7 +84,7 @@ export default function Info({
             
             <ul className="list-disc pl-5">
               {span.map((item, index) => (
-                <li key={index} className="font-medium detail">{item}</li>
+                <li key={index} className="font-light detail">{item}</li>
               ))}
             </ul>
           </h1>

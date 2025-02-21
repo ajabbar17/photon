@@ -101,7 +101,7 @@ const Navbar = () => {
               <Link 
                 href="/"
                 ref={el => navLinksRef.current[0] = el}
-                className="text-[#0c1b34] z-50 detail opacity-0"
+                className="text-[#0c1b34] nav-link z-50 detail opacity-0"
               >
                 Home
               </Link>
@@ -111,7 +111,7 @@ const Navbar = () => {
                 <button
                   onMouseEnter={() => setIsDropdownOpen(true)}
                   onMouseLeave={() => setIsDropdownOpen(false)}
-                  className="text-[#0c1b34] z-50 detail opacity-0"
+                  className="text-[#0c1b34] z-50 detail nav-link opacity-0"
                   ref={el => navLinksRef.current[1] = el}
                 >
                   Services
@@ -139,7 +139,7 @@ const Navbar = () => {
               <Link 
                 href="/contact"
                 ref={el => navLinksRef.current[2] = el}
-                className="text-[#0c1b34] z-50 detail opacity-0"
+                className="text-[#0c1b34] z-50 detail nav-link opacity-0"
               >
                 Contact
               </Link>
@@ -167,11 +167,11 @@ const Navbar = () => {
         </div>
 
         <ul className="flex flex-col gap-4 p-8 text-[#fff]">
-          <li><Link href="/" onClick={toggleSidebar} className="detail">Home</Link></li>
+          <li><Link href="/" onClick={toggleSidebar} className="detail nav-link">Home</Link></li>
           <li>
             <button 
               onClick={toggleMobileServices}
-              className="flex items-center justify-between w-full mb-2 font-semibold detail"
+              className="flex items-center justify-between w-full mb-2 nav-link font-semibold detail"
             >
               Services
               <span className={`transition-transform duration-300 ${isMobileServicesOpen ? 'rotate-180' : ''}`}>
@@ -194,7 +194,7 @@ const Navbar = () => {
               ))}
             </ul>
           </li>
-          <li><Link href="/contact" onClick={toggleSidebar} className="detail">Contact</Link></li>
+          <li><Link href="/contact" onClick={toggleSidebar} className="detail nav-link">Contact</Link></li>
         </ul>
       </div>
 
