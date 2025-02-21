@@ -59,9 +59,9 @@ const ServiceCard = ({ title, description, position, src }) => {
   const getLevelClasses = (level) => {
     switch (level) {
       case -2:
-        return "left-[2%] 3xl:left-[11%] 4xl:left-[16%] top-[7%] h-[380px] w-[320px] md:w-[400px] 4xl:w-[450px] 4xl:h-[430px] z-0 opacity-70";
+        return "left-[2%] 3xl:left-[8%] 4xl:left-[16%] top-[7%] h-[380px] w-[320px] md:w-[400px] 4xl:w-[450px] 4xl:h-[430px] z-0 opacity-70";
       case -1:
-        return "left-[30%] 4xl:left-[38%] top-[7%]  h-[380px] w-[320px] md:w-[400px] 4xl:w-[450px] 4xl:h-[430px] z-10 opacity-85";
+        return "left-[30%] 4xl:left-[35%] top-[7%]  h-[380px] w-[320px] md:w-[400px] 4xl:w-[450px] 4xl:h-[430px] z-10 opacity-85";
       case 0:
         return "left-[50%] top-[1%] h-[470px] w-[320px] md:w-[400px] 4xl:w-[450px] 4xl:h-[520px] z-20 opacity-100"; // Increased dimensions for active card
       case 1:
