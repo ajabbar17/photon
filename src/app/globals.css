@@ -216,6 +216,11 @@ background: linear-gradient(340deg, rgb(2, 78, 116) 1%, rgba(0,42,66,1) 46%);
     bottom: 15rem;
   }
 }
+@media (min-width: 2560px) {
+  .circle-arrow {
+    bottom: 20rem;
+  }
+}
 @media (min-width: 390px) {
   .img1 {
     bottom: 34vh ;
