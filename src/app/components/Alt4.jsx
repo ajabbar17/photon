@@ -59,15 +59,15 @@ const ServiceCard = ({ title, description, position, src }) => {
   const getLevelClasses = (level) => {
     switch (level) {
       case -2:
-        return "left-[2%] 3xl:left-[8%] top-[7%] h-[380px] w-[320px] md:w-[400px] z-0 opacity-70";
+        return "left-[2%] 3xl:left-[8%] 4xl:left-[12%] top-[7%] h-[380px] w-[320px] md:w-[400px] z-0 opacity-70";
       case -1:
-        return "left-[30%] top-[7%]  h-[380px] w-[320px] md:w-[400px] z-10 opacity-85";
+        return "left-[30%] 4xl:left-[35%] top-[7%]  h-[380px] w-[320px] md:w-[400px] z-10 opacity-85";
       case 0:
         return "left-[50%] top-[1%] h-[470px] w-[320px] md:w-[400px] z-20 opacity-100"; // Increased dimensions for active card
       case 1:
-        return "left-[70%] top-[7%] h-[380px] w-[320px] md:w-[400px] z-10 opacity-85";
+        return "left-[70%] 4xl:left-[65%] top-[7%] h-[380px] w-[320px] md:w-[400px] z-10 opacity-85";
       case 2:
-        return "left-[98%] 3xl:left-[92%] top-[7%] h-[380px] w-[320px] md:w-[400px] z-0 opacity-70";
+        return "left-[98%]  3xl:left-[92%] 4xl:left-[88%] top-[7%] h-[380px] w-[320px] md:w-[400px] z-0 opacity-70";
       default:
         return "";
     }
@@ -137,7 +137,7 @@ const Alt4 = ({ active: initialActive = 0 }) => {
         <div className="relative h-full w-full">{generateItems()}</div>
 
         {/* Navigation arrows moved to bottom */}
-        <div className="flex absolute top-[75%] btn 3xl:top-[63%] justify-center z-50 gap-8 mb-8">
+        <div className="flex absolute top-[75%] btn 3xl:top-[63%] 4xl:top-[58%] justify-center z-50 gap-8 mb-8">
           <button
             onClick={moveLeft}
             className="rounded-full bg-transparent  transition-all duration-500  hover:text-purple-600 text-white flex items-center justify-center"
@@ -153,23 +153,23 @@ const Alt4 = ({ active: initialActive = 0 }) => {
         </div>
       </div>
 
-      <div className="absolute bottom-[30vh] img1 xl:bottom-28 3xl:bottom-64">
+      <div className="absolute bottom-[30vh] img1 xl:bottom-28 3xl:bottom-64 4xl:bottom-80">
         <Image
           src="/grid.png"
           alt="background grid"
           className="-z-10 h-auto "
-          width={1920}
+          width={2560}
           height={1080}
           
           priority
           />
       </div>
-      <div className="absolute bottom-[25vh] img1 xl:bottom-8 3xl:bottom-36">
+      <div className="absolute bottom-[25vh] img1 xl:bottom-8 3xl:bottom-36 4xl:bottom-52">
         <Image
           src="/circle.png"
           alt="background circle"
           className=" mix-blend-screen  z-0"
-          width={1920}
+          width={2560}
           height={1080}
           priority
           />

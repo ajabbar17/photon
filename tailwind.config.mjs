@@ -12,10 +12,11 @@ export default {
         foreground: "var(--foreground)",
       },
       boxShadow: {
-        'custom-card': '0px 10px 20px rgba(0, 0, 0, 0.3)',
+        "custom-card": "0px 10px 20px rgba(0, 0, 0, 0.3)",
       },
       screens: {
-        '3xl': '1920px', 
+        "3xl": "1920px",
+        "4xl": "2560px",
       },
     },
   },
