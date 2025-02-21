@@ -55,7 +55,7 @@ const ContactForm = () => {
     <div className="min-h-screen bg-[#0d2538] py-4 sm:py-6 md:py-8 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl 3xl:max-w-screen mt-20 md:mt-10 xl:mt-0 mx-auto">
         <div className="flex flex-col items-center justify-between lg:flex-row gap-6">
-          <div className="w-full lg:w-1/2 pt-4 sm:pt-6 text-center lg:text-left">
+          <div className="w-full lg:w-1/2 3xl:w-[86%] pt-4 sm:pt-6 text-center lg:text-left">
             <h2 className="text-3xl sm:text-4xl md:text-5xl 3xl:text-7xl heading font-bold text-white mb-2 sm:mb-3">
               Let&apos;s Talk About Everything!
             </h2>
