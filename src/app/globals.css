@@ -163,7 +163,7 @@ background: linear-gradient(340deg, rgb(2, 78, 116) 1%, rgba(0,42,66,1) 46%);
         transform: translateX(0);
       }
       100% {
-        transform: translateX(calc(-280px * 3 - 1rem * 3));
+        transform: translateX(calc(-350px * 3 - 1rem * 3));
       }
     }
   

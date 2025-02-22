@@ -96,7 +96,7 @@ const Footer = () => {
                 />
                 <button 
                   type="submit"
-                  className="bg-orange-500 uppercase font-bold w-auto xl:w-[160px] heading -ml-7 border-2 text-white px-6 xl:px-[47px] py-1 xl:py-2 rounded-[99px] hover:bg-orange-600"
+                  className="bg-orange-500 uppercase font-bold w-[130px] xl:w-[160px] -ml-7 border-2 heading text-white px-6 xl:px-[47px] py-1 xl:py-2 rounded-[99px] hover:bg-orange-600"
                 >
                   Join Us
                 </button>
