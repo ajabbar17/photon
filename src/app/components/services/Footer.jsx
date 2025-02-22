@@ -90,7 +90,7 @@ const Footer = () => {
                 />
                 <button 
                   type="submit"
-                  className="bg-orange-500 uppercase font-bold w-[130px] heading -ml-7 border-2 text-white px-6 md:px-[47px] py-2 rounded-[99px] hover:bg-orange-600">
+                  className="bg-orange-500 uppercase font-bold w-[130px] md:w-[160px] heading -ml-7 border-2 text-white px-6 md:px-[47px] py-2 rounded-[99px] hover:bg-orange-600">
                   Join Us
                 </button>
               </form>
