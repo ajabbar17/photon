@@ -1,8 +1,8 @@
-import Footer from "@/app/components/services/Footer";
-import Info from "@/app/components/services/Info";
 import Navbar from "@/app/components/services/Navbar";
-import ServiceCards from "@/app/components/services/ServiceCards";
 import ServiceHero from "@/app/components/services/ServiceHero";
+import Info from "@/app/components/services/Info";
+import ServiceCards from "@/app/components/services/ServiceCards";
+import Footer from "@/app/components/services/Footer";
 import React from "react";
 
 export const metadata = {
@@ -46,11 +46,11 @@ const page = () => {
         title="Powering the Future with Clean, Renewable Wind Energy"
         description="At Photon Engineering Realm, we offer cutting-edge wind energy solutions designed to harness  the power of nature for sustainable and efficient energy generation. Our wind power systems  help reduce dependence on conventional energy sources, lowering costs and promoting  environmental responsibility."
       />
-      <ServiceCards
-        title="Why Choose Our Wind Energy Solutions?"
-        services={servicesData}
-      />
-      <Footer />
+        <ServiceCards
+          title="Why Choose Our Wind Energy Solutions?"
+          services={servicesData}
+        />
+        <Footer />
     </div>
   );
 };

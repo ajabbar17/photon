@@ -58,6 +58,7 @@ const Footer = () => {
                   className="w-32"
                   width={128}
                   height={128}
+                  loading="lazy"
                 />
               </Link>
             </div>
@@ -85,11 +86,11 @@ const Footer = () => {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="ENTER YOUR GMAIL"
-                  className="bg-[#0a2540] border w-[200px] xl:w-[294px] border-[#F25525] placeholder:font-semibold placeholder:text-white text-white px-4 py-2 rounded-l-[99px] outline-none"
+                  className="bg-[#0a2540] border w-[200px] xl:w-[294px] heading border-[#F25525] placeholder:font-semibold placeholder:text-white text-white px-4 py-2 rounded-l-[99px] outline-none"
                 />
                 <button 
                   type="submit"
-                  className="bg-orange-500 uppercase font-bold w-[160px] -ml-7 border-2 text-white px-9 md:px-[47px] py-2 rounded-[99px] hover:bg-orange-600">
+                  className="bg-orange-500 uppercase font-bold w-[160px] heading -ml-7 border-2 text-white px-9 md:px-[47px] py-2 rounded-[99px] hover:bg-orange-600">
                   Join Us
                 </button>
               </form>

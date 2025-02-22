@@ -62,7 +62,7 @@ export default function ContactInfo({
   };
 
   return (
-    <section className="bg-[#0d2538] text-white py-16 px-6 md:px-10 flex flex-col md:flex-row items-center gap-10 overflow-hidden">
+    <section className="bg-[#0d2538] text-white py-16 px-6 md:px-10 flex flex-col md:flex-row items-center justify-center gap-10 overflow-hidden">
       {/* Image Section */}
       <div ref={imageRef} className="opacity-0">
         <Image

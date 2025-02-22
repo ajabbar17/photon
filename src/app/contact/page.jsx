@@ -1,4 +1,3 @@
-import Info from "@/app/components/services/Info";
 import Navbar from "@/app/components/services/Navbar";
 import ServiceHero from "@/app/components/services/ServiceHero";
 import React from "react";

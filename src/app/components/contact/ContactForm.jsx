@@ -1,5 +1,5 @@
 "use client";
-import { LocateFixedIcon, LocateIcon, Map, MapPin, Phone } from "lucide-react";
+import {  MapPin, Phone } from "lucide-react";
 import { useState } from "react";
 
 const ContactForm = () => {
@@ -86,7 +86,7 @@ const ContactForm = () => {
 
           <div className="w-full lg:w-[30%] mt-8 lg:mt-20 px-4 sm:px-0">
             <div className="rounded-3xl border border-[#ffffff64] bg-[#112b41] p-4 sm:p-6 max-w-md mx-auto lg:max-w-none">
-              <form className="space-y-4" onSubmit={handleSubmit}>
+              <form className="space-y-4 detail" onSubmit={handleSubmit}>
                 <div>
                   <label className="block text-white text-sm font-medium mb-1">
                     Your Name*
@@ -162,7 +162,7 @@ const ContactForm = () => {
 
                 <button
                   type="submit"
-                  className="w-full px-4 py-2 mt-4 bg-[#f25525] hover:bg-[#C6370C] text-white font-medium rounded-md transition-colors duration-200 flex items-center justify-center text-sm sm:text-base"
+                  className="w-full px-4 py-2 mt-4 bg-[#f25525] heading hover:bg-[#C6370C] text-white font-medium rounded-md transition-colors duration-200 flex items-center justify-center text-sm sm:text-base"
                 >
                   Send Your Question
                 </button>

@@ -1,8 +1,8 @@
-import Footer from "@/app/components/services/Footer";
-import Info from "@/app/components/services/Info";
 import Navbar from "@/app/components/services/Navbar";
-import ServiceCards from "@/app/components/services/ServiceCards";
 import ServiceHero from "@/app/components/services/ServiceHero";
+import Info from "@/app/components/services/Info";
+import ServiceCards from "@/app/components/services/ServiceCards";
+import Footer from "@/app/components/services/Footer";
 import React from "react";
 
 export const metadata = {
@@ -62,11 +62,11 @@ const page = () => {
         span={span}
         description="A Heating, Ventilation, and Air Conditioning (HVAC) system regulates indoor temperature, humidity, and air quality, ensuring comfort and health in residential, commercial, and industrial spaces. Its importance lies in maintaining optimal living and working conditions, improving air quality, and enhancing energy efficiency while reducing environmental impact."
       />
-      <ServiceCards
-        title="Our HVAC Services Include:"
-        services={servicesData}
-      />
-      <Footer />
+        <ServiceCards
+          title="Our HVAC Services Include:"
+          services={servicesData}
+        />
+        <Footer />
     </div>
   );
 };
