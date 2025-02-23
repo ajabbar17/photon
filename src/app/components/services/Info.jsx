@@ -58,6 +58,18 @@ export default function Info({
     };
   }, []);
 
+  const formatWithBoldAbbreviations = (text) => {
+    // Pattern to match words in parentheses or all-caps words
+    const abbreviationPattern = /\(([^)]+)\)|\b[A-Z]{2,}\b/g;
+    
+    return text.split(abbreviationPattern).map((part, index) => {
+      if (part && part.match(/^[A-Z]{2,}$/) || (index % 2 === 1)) {
+        return <strong key={index}>({part})</strong>;
+      }
+      return part;
+    });
+  };
+
   return (
     <section className="bg-[#0d2538] text-white py-16 px-6 md:px-10 flex flex-col md:flex-row xl:justify-center items-center gap-10 overflow-hidden">
       {/* Image Section */}
@@ -84,7 +96,9 @@ export default function Info({
             
             <ul className="list-disc pl-5">
               {span.map((item, index) => (
-                <li key={index} className="font-light detail">{item}</li>
+                <li key={index} className="font-light detail">
+                  {formatWithBoldAbbreviations(item)}
+                </li>
               ))}
             </ul>
           </h1>
