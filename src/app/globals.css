@@ -221,6 +221,11 @@ background: linear-gradient(340deg, rgb(2, 78, 116) 1%, rgba(0,42,66,1) 46%);
     bottom: 20rem;
   }
 }
+@media (min-width: 375px) {
+  .img1 {
+    bottom: 22vh ;
+  }
+}
 @media (min-width: 390px) {
   .img1 {
     bottom: 34vh ;
