@@ -45,10 +45,10 @@ const page = () => {
       <ServiceHero
         title="Solar Powered"
         title2="System Solutions"
-        imageUrl="/solar.png"
+        imageUrl="/solar-min.png"
       />
       <Info
-        imageUrl="/solar2.png" // Replace with actual image path
+        imageUrl="/solar2-min.png" // Replace with actual image path
         title="Harness the Power of the Sun with Our Solar Panels"
         title2="Our Services:"
         span={span}

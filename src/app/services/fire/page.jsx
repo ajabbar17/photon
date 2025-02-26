@@ -52,7 +52,7 @@ const page = () => {
       <ServiceHero
         title="Fire Detection, Alarm & Protection"
         title2="System Solutions"
-        imageUrl="/fire.png"
+        imageUrl="/fire-min.png"
       />
       <Info
         imageUrl="/fire3.svg" // Replace with actual image path

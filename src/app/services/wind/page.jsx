@@ -39,10 +39,10 @@ const page = () => {
       <ServiceHero
         title="Wind Powered Energy"
         title2="Solutions"
-        imageUrl="/wind.png"
+        imageUrl="/wind-min.png"
       />
       <Info
-        imageUrl="/wind2.png" // Replace with actual image path
+        imageUrl="/wind2-min.png" // Replace with actual image path
         title="Powering the Future with Clean, Renewable Wind Energy"
         description="At Photon Engineering Realm, we offer cutting-edge wind energy solutions designed to harness  the power of nature for sustainable and efficient energy generation. Our wind power systems  help reduce dependence on conventional energy sources, lowering costs and promoting  environmental responsibility."
       />

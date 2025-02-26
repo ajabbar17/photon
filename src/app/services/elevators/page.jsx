@@ -50,10 +50,10 @@ const page = () => {
       <ServiceHero
         title="Elevators, Escalators, Travelators &"
         title2="Moving Walkways"
-        imageUrl="/elevators.png"
+        imageUrl="/elevators-min.png"
       />
       <Info
-        imageUrl="/elevators2.png" // Replace with actual image path
+        imageUrl="/elevators2-min.png" // Replace with actual image path
         title="Enhance Your Space with Our Transportation Solutions"
         title2="Our Services"
         span={span}

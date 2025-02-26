@@ -49,10 +49,10 @@ const page = () => {
       <ServiceHero
         title="Lightning Protection & Earth Grounding"
         title2="System Solutions"
-        imageUrl="/lightning.png"
+        imageUrl="/lightning-min.png"
       />
       <Info
-        imageUrl="/lightning2.png" // Replace with actual image path
+        imageUrl="/lightning2-min.png" // Replace with actual image path
         title="Advanced Protection Against Lightning Strikes"
         title2="Our Services"
         span={span}

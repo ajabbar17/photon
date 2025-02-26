@@ -50,10 +50,10 @@ const page = () => {
       <ServiceHero
         title="Drainage & Sewerage"
         title2="Solutions"
-        imageUrl="/drainage.png"
+        imageUrl="/drainage-min.png"
       />
       <Info
-        imageUrl="/drainage2.png" // Replace with actual image path
+        imageUrl="/drainage2-min.png" // Replace with actual image path
         title="Plumbing, Water Supply & Drainage Solutions"
         description="At Photon Engineering Realm (PER), we provide comprehensive plumbing, water supply, and drainage solutions for commercial, industrial, and residential projects. Our expert team ensures efficient water distribution and waste management with top-quality materials and advanced technology."
         title2="Our Services"

@@ -53,7 +53,7 @@ const page = () => {
         title="Heating, Ventilation & Air Conditioning"
         span="(HVAC)"
         title2="System Solutions"
-        imageUrl="/hvac.png"
+        imageUrl="/hvac-min.png"
       />
       <Info
         imageUrl="/hvac3.svg" // Replace with actual image path
