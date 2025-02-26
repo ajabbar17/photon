@@ -1,9 +1,19 @@
 import Navbar from "@/app/components/services/Navbar";
 import ServiceHero from "@/app/components/services/ServiceHero";
 import Info from "@/app/components/services/Info";
-import ServiceCards from "@/app/components/services/ServiceCards";
-import Footer from "@/app/components/services/Footer";
+import dynamic from "next/dynamic";
 import React from "react";
+
+const ServiceCards = dynamic(
+  () => import("@/app/components/services/ServiceCards"),
+  {
+    loading: () => <div>Loading services...</div>,
+  }
+);
+
+const Footer = dynamic(() => import("@/app/components/services/Footer"), {
+  loading: () => <div>Loading footer...</div>,
+});
 
 export const metadata = {
   title: "Building Management System (BMS)",
@@ -39,15 +49,18 @@ const page = () => {
       <ServiceHero
         title="Building Management System (BMS)"
         title2="Solutions"
-        imageUrl="/bms.png"
+        imageUrl="/bms-min.png"
       />
       <Info
-        imageUrl="/bms2.png" // Replace with actual image path
+        imageUrl="/bms2-min.png"
         title="Smart Solutions for Smarter Buildings"
         description="A well-designed Building Management System (BMS) optimizes the operation of various  building functions, ensuring efficiency, safety, and cost savings. At Photon Engineering Realm,  we provide intelligent BMS solutions that offer centralized control over essential building  operations."
       />
-      <ServiceCards title="Our BMS Services include:" services={servicesData} />
-      <Footer />
+        <ServiceCards
+          title="Our BMS Services include:"
+          services={servicesData}
+        />
+        <Footer />
     </div>
   );
 };
