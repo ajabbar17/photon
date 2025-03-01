@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
 
@@ -103,28 +103,55 @@ const ServiceCard = ({ title, description, position, src }) => {
 
 const Alt4 = ({ active: initialActive = 0 }) => {
   const [active, setActive] = useState(initialActive);
+  const containerRef = useRef(null);
+  const [touchStart, setTouchStart] = useState(null);
+  const [touchEnd, setTouchEnd] = useState(null);
+  
+  // Minimum swipe distance (in px)
+  const minSwipeDistance = 50;
 
   const moveLeft = () => {
-    setActive((prev) => (prev === 0 ? services.length - 1 : prev + 1));
+    setActive((prev) => (prev === 0 ? services.length - 1 : prev - 1));
   };
 
   const moveRight = () => {
-    setActive((prev) => (prev - 1) % services.length);
+    setActive((prev) => (prev + 1) % services.length);
+  };
+
+  const onTouchStart = (e) => {
+    setTouchEnd(null);
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const onTouchMove = (e) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const onTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+    
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > minSwipeDistance;
+    const isRightSwipe = distance < -minSwipeDistance;
+    
+    if (isLeftSwipe) {
+      moveRight(); // Swiping left moves to next (right arrow)
+    } else if (isRightSwipe) {
+      moveLeft(); // Swiping right moves to previous (left arrow)
+    }
   };
 
   const generateItems = () => {
     const itemElements = [];
 
-    for (let i = active - 2; i < active + 3; i++) {
-      let index = i;
-      if (i < 0) {
-        index = services.length + i;
-      } else if (i >= services.length) {
-        index = i % services.length;
+    for (let i = -2; i <= 2; i++) {
+      let index = (active + i) % services.length;
+      if (index < 0) {
+        index = services.length + index;
       }
-      const level = active - i;
+      
       itemElements.push(
-        <ServiceCard key={index} {...services[index]} position={level} />
+        <ServiceCard key={index} {...services[index]} position={i} />
       );
     }
 
@@ -132,23 +159,29 @@ const Alt4 = ({ active: initialActive = 0 }) => {
   };
 
   return (
-    <div className="relative h-screen w-full py-4 flex flex-col  pt-16 overflow-hidden select-none">
-      <div className="absolute inset-0 flex flex-col  items-center justify-center">
+    <div 
+      className="relative h-screen w-full py-4 flex flex-col pt-16 overflow-hidden select-none"
+      ref={containerRef}
+      onTouchStart={onTouchStart}
+      onTouchMove={onTouchMove}
+      onTouchEnd={onTouchEnd}
+    >
+      <div className="absolute inset-0 flex flex-col items-center justify-center">
         <div className="relative h-full w-full">{generateItems()}</div>
 
         {/* Navigation arrows moved to bottom */}
-        <div className="flex absolute top-[75%] btn 3xl:top-[63%] 4xl:top-[58%] justify-center z-50 gap-8 mb-8">
+        <div className="flex  absolute top-[75%] btn 3xl:top-[63%] 4xl:top-[58%] justify-center z-50 gap-8 mb-8">
           <button
             onClick={moveLeft}
-            className="rounded-full bg-transparent  transition-all duration-500  hover:text-purple-600 text-white flex items-center justify-center"
+            className="rounded-full  bg-transparent transition-all duration-500 hover:text-purple-600 text-white flex items-center justify-center"
           >
-            <ChevronLeft className="w-16 h-16" strokeWidth={3} />
+            <ChevronLeft className="w-16 h-16 md:block hidden" strokeWidth={3} />
           </button>
           <button
             onClick={moveRight}
-            className=" rounded-full bg-transparent transition-all duration-500  hover:text-purple-600 text-white flex items-center justify-center"
+            className="rounded-full bg-transparent transition-all duration-500 hover:text-purple-600 text-white flex items-center justify-center"
           >
-            <ChevronRight className="w-16 h-16" strokeWidth={3} />
+            <ChevronRight className="w-16 h-16 md:block hidden" strokeWidth={3} />
           </button>
         </div>
       </div>
@@ -157,22 +190,21 @@ const Alt4 = ({ active: initialActive = 0 }) => {
         <Image
           src="/grid.png"
           alt="background grid"
-          className="-z-10 h-auto "
+          className="-z-10 h-auto"
           width={2560}
           height={1080}
-          
           priority
-          />
+        />
       </div>
       <div className="absolute bottom-[25vh] img1 xl:bottom-8 3xl:bottom-36 4xl:bottom-52">
         <Image
           src="/circle.png"
           alt="background circle"
-          className=" mix-blend-screen  z-0"
+          className="mix-blend-screen z-0"
           width={2560}
           height={1080}
           priority
-          />
+        />
       </div>
     </div>
   );
