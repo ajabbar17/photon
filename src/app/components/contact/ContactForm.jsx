@@ -73,7 +73,7 @@ const ContactForm = () => {
                 <p className="flex items-center detail">
                   <MapPin className="mr-2 flex-shrink-0" />
                   <span className="text-sm sm:text-base 3xl:text-xl">
-                    47-A, Agrics Town, Raiwind Road, Lahore
+                  409 Block E, Jubilee Town, Lahore
                   </span>
                 </p>
                 <p className="flex items-center detail">
