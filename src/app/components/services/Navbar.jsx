@@ -45,7 +45,7 @@ export default function Navbar() {
       <nav className="absolute top-0 left-0 w-full flex items-center z-50 px-8 py-6 text-white">
         <div ref={logoRef} className="w-[200px]">
           <Link href="/">
-            <Image src="/Group 142.svg" width={150} height={50} alt="Logo" />
+            <Image src="/Group 142.svg" width={150} height={50} alt="Logo" loading="eager"/>
           </Link>
         </div>
 

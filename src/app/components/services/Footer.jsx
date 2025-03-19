@@ -58,7 +58,7 @@ const Footer = () => {
                   className="w-32"
                   width={128}
                   height={128}
-                  loading="lazy"
+                
                 />
               </Link>
             </div>
